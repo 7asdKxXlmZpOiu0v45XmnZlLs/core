@@ -217,7 +217,7 @@ max_2.TextSize = 20
 max_2.TextTransparency = 1
 max_2.TextWrapped = true
 -- Scripts:
-function SCRIPT_EEVZ65_FAKESCRIPT() -- view.Script 
+function SCRIPT_XCDE71_FAKESCRIPT() -- view.Script 
 	local script = Instance.new('Script')
 	script.Parent = view
 	script.Parent.MouseButton1Click:connect(function()
@@ -234,6 +234,14 @@ function SCRIPT_EEVZ65_FAKESCRIPT() -- view.Script
 	s.Parent = game.Workspace
 	 
 	s:play()
+	
+	local function playsound(id)
+		local sound = Instance.new('Sound',Camera)
+		sound.SoundId = 'rbxassetid://'..id
+		sound.Volume = 3
+		sound:Play()
+		game:GetService('Debris'):AddItem(sound,5)
+	end
 	
 	local function Notification(...)
 		playsound(140910211)
@@ -270,8 +278,8 @@ function SCRIPT_EEVZ65_FAKESCRIPT() -- view.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_EEVZ65_FAKESCRIPT))
-function SCRIPT_BIRW86_FAKESCRIPT() -- corpse.Script 
+coroutine.resume(coroutine.create(SCRIPT_XCDE71_FAKESCRIPT))
+function SCRIPT_NIXH76_FAKESCRIPT() -- corpse.Script 
 	local script = Instance.new('Script')
 	script.Parent = corpse
 	script.Parent.MouseButton1Click:connect(function()
@@ -288,6 +296,14 @@ function SCRIPT_BIRW86_FAKESCRIPT() -- corpse.Script
 	s.Parent = game.Workspace
 	 
 	s:play()
+	
+	local function playsound(id)
+		local sound = Instance.new('Sound',Camera)
+		sound.SoundId = 'rbxassetid://'..id
+		sound.Volume = 3
+		sound:Play()
+		game:GetService('Debris'):AddItem(sound,5)
+	end
 	
 	local function Notification(...)
 		playsound(140910211)
@@ -374,8 +390,8 @@ function SCRIPT_BIRW86_FAKESCRIPT() -- corpse.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_BIRW86_FAKESCRIPT))
-function SCRIPT_ZTJV72_FAKESCRIPT() -- fly.Script 
+coroutine.resume(coroutine.create(SCRIPT_NIXH76_FAKESCRIPT))
+function SCRIPT_BBVI70_FAKESCRIPT() -- fly.Script 
 	local script = Instance.new('Script')
 	script.Parent = fly
 	script.Parent.MouseButton1Click:connect(function()
@@ -400,6 +416,14 @@ function SCRIPT_ZTJV72_FAKESCRIPT() -- fly.Script
 	script.Parent.Active = true
 	script.Parent.BackgroundTransparency = 0.7
 	script.Parent.Text = "TOGGLE FLY"
+	
+	local function playsound(id)
+		local sound = Instance.new('Sound',Camera)
+		sound.SoundId = 'rbxassetid://'..id
+		sound.Volume = 3
+		sound:Play()
+		game:GetService('Debris'):AddItem(sound,5)
+	end
 	
 	local function Notification(...)
 		playsound(140910211)
@@ -451,8 +475,8 @@ function SCRIPT_ZTJV72_FAKESCRIPT() -- fly.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ZTJV72_FAKESCRIPT))
-function SCRIPT_ZZHX90_FAKESCRIPT() -- max.Script 
+coroutine.resume(coroutine.create(SCRIPT_BBVI70_FAKESCRIPT))
+function SCRIPT_ZONB75_FAKESCRIPT() -- max.Script 
 	local script = Instance.new('Script')
 	script.Parent = max
 	script.Parent.MouseButton1Click:connect(function()
@@ -471,6 +495,14 @@ function SCRIPT_ZZHX90_FAKESCRIPT() -- max.Script
 	s:play()
 	
 	--
+	
+	local function playsound(id)
+		local sound = Instance.new('Sound',Camera)
+		sound.SoundId = 'rbxassetid://'..id
+		sound.Volume = 3
+		sound:Play()
+		game:GetService('Debris'):AddItem(sound,5)
+	end
 	
 	local function Notification(...)
 		playsound(140910211)
@@ -496,8 +528,8 @@ function SCRIPT_ZZHX90_FAKESCRIPT() -- max.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ZZHX90_FAKESCRIPT))
-function SCRIPT_EYUQ84_FAKESCRIPT() -- aim.Script 
+coroutine.resume(coroutine.create(SCRIPT_ZONB75_FAKESCRIPT))
+function SCRIPT_EPHY70_FAKESCRIPT() -- aim.Script 
 	local script = Instance.new('Script')
 	script.Parent = aim
 	script.Parent.MouseButton1Click:connect(function()
@@ -1335,8 +1367,8 @@ function SCRIPT_EYUQ84_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_EYUQ84_FAKESCRIPT))
-function SCRIPT_NHYZ87_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_EPHY70_FAKESCRIPT))
+function SCRIPT_HWEG65_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
@@ -1353,6 +1385,14 @@ function SCRIPT_NHYZ87_FAKESCRIPT() -- speed.Script
 	s.Parent = game.Workspace
 	 
 	s:play()
+	
+	local function playsound(id)
+		local sound = Instance.new('Sound',Camera)
+		sound.SoundId = 'rbxassetid://'..id
+		sound.Volume = 3
+		sound:Play()
+		game:GetService('Debris'):AddItem(sound,5)
+	end
 	
 	local function Notification(...)
 		playsound(140910211)
@@ -1389,8 +1429,8 @@ function SCRIPT_NHYZ87_FAKESCRIPT() -- speed.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_NHYZ87_FAKESCRIPT))
-function SCRIPT_GNUA82_FAKESCRIPT() -- save.Script 
+coroutine.resume(coroutine.create(SCRIPT_HWEG65_FAKESCRIPT))
+function SCRIPT_UYSR69_FAKESCRIPT() -- save.Script 
 	local script = Instance.new('Script')
 	script.Parent = save
 	script.Parent.MouseButton1Click:connect(function()
@@ -1415,6 +1455,14 @@ function SCRIPT_GNUA82_FAKESCRIPT() -- save.Script
 	script.Parent.Active = true
 	script.Parent.BackgroundTransparency = 0.7
 	script.Parent.Text = "TOGGLE  LOOT SAVE"
+	
+	local function playsound(id)
+		local sound = Instance.new('Sound',Camera)
+		sound.SoundId = 'rbxassetid://'..id
+		sound.Volume = 3
+		sound:Play()
+		game:GetService('Debris'):AddItem(sound,5)
+	end
 	
 	local function Notification(...)
 		playsound(140910211)
@@ -1451,11 +1499,19 @@ function SCRIPT_GNUA82_FAKESCRIPT() -- save.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_GNUA82_FAKESCRIPT))
-function SCRIPT_JXRH88_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_UYSR69_FAKESCRIPT))
+function SCRIPT_KZEC84_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
+	
+	local function playsound(id)
+		local sound = Instance.new('Sound',Camera)
+		sound.SoundId = 'rbxassetid://'..id
+		sound.Volume = 3
+		sound:Play()
+		game:GetService('Debris'):AddItem(sound,5)
+	end
 	
 	local function Notification(...)
 		playsound(140910211)
@@ -1467,8 +1523,8 @@ function SCRIPT_JXRH88_FAKESCRIPT() -- info.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_JXRH88_FAKESCRIPT))
-function SCRIPT_CYMK80_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_KZEC84_FAKESCRIPT))
+function SCRIPT_QRJW78_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1493,8 +1549,8 @@ function SCRIPT_CYMK80_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_CYMK80_FAKESCRIPT))
-function SCRIPT_NXLD67_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_QRJW78_FAKESCRIPT))
+function SCRIPT_USRQ72_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1519,8 +1575,8 @@ function SCRIPT_NXLD67_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_NXLD67_FAKESCRIPT))
-function SCRIPT_VXOW86_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_USRQ72_FAKESCRIPT))
+function SCRIPT_CPIC71_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -1557,8 +1613,8 @@ function SCRIPT_VXOW86_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_VXOW86_FAKESCRIPT))
-function SCRIPT_BLXM72_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_CPIC71_FAKESCRIPT))
+function SCRIPT_BNLB79_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -1569,8 +1625,8 @@ function SCRIPT_BLXM72_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_BLXM72_FAKESCRIPT))
-function SCRIPT_OHHV76_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_BNLB79_FAKESCRIPT))
+function SCRIPT_URKI81_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -1595,4 +1651,4 @@ function SCRIPT_OHHV76_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_OHHV76_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_URKI81_FAKESCRIPT))
