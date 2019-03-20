@@ -217,7 +217,7 @@ max_2.TextSize = 20
 max_2.TextTransparency = 1
 max_2.TextWrapped = true
 -- Scripts:
-function SCRIPT_XCDE71_FAKESCRIPT() -- view.Script 
+function SCRIPT_STHW86_FAKESCRIPT() -- view.Script 
 	local script = Instance.new('Script')
 	script.Parent = view
 	script.Parent.MouseButton1Click:connect(function()
@@ -245,7 +245,7 @@ function SCRIPT_XCDE71_FAKESCRIPT() -- view.Script
 	
 	local function Notification(...)
 		playsound(140910211)
-		StarterGui:SetCore('SendNotification',...)
+		game.StarterGui:SetCore('SendNotification',...)
 	end
 	
 	Notification({Title='Loaded';Text='View Player Toggled';Duration=4;Icon=''})
@@ -278,8 +278,8 @@ function SCRIPT_XCDE71_FAKESCRIPT() -- view.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XCDE71_FAKESCRIPT))
-function SCRIPT_NIXH76_FAKESCRIPT() -- corpse.Script 
+coroutine.resume(coroutine.create(SCRIPT_STHW86_FAKESCRIPT))
+function SCRIPT_ZZLM78_FAKESCRIPT() -- corpse.Script 
 	local script = Instance.new('Script')
 	script.Parent = corpse
 	script.Parent.MouseButton1Click:connect(function()
@@ -307,7 +307,7 @@ function SCRIPT_NIXH76_FAKESCRIPT() -- corpse.Script
 	
 	local function Notification(...)
 		playsound(140910211)
-		StarterGui:SetCore('SendNotification',...)
+		game.StarterGui:SetCore('SendNotification',...)
 	end
 	
 	Notification({Title='Teleported';Text='Teleported to Corpse';Duration=4;Icon=''})
@@ -390,8 +390,8 @@ function SCRIPT_NIXH76_FAKESCRIPT() -- corpse.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_NIXH76_FAKESCRIPT))
-function SCRIPT_BBVI70_FAKESCRIPT() -- fly.Script 
+coroutine.resume(coroutine.create(SCRIPT_ZZLM78_FAKESCRIPT))
+function SCRIPT_UZEI89_FAKESCRIPT() -- fly.Script 
 	local script = Instance.new('Script')
 	script.Parent = fly
 	script.Parent.MouseButton1Click:connect(function()
@@ -427,7 +427,7 @@ function SCRIPT_BBVI70_FAKESCRIPT() -- fly.Script
 	
 	local function Notification(...)
 		playsound(140910211)
-		StarterGui:SetCore('SendNotification',...)
+		game.StarterGui:SetCore('SendNotification',...)
 	end
 	
 	Notification({Title='Loaded';Text='Fly Toggled';Duration=4;Icon=''})
@@ -475,8 +475,8 @@ function SCRIPT_BBVI70_FAKESCRIPT() -- fly.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_BBVI70_FAKESCRIPT))
-function SCRIPT_ZONB75_FAKESCRIPT() -- max.Script 
+coroutine.resume(coroutine.create(SCRIPT_UZEI89_FAKESCRIPT))
+function SCRIPT_XKQD69_FAKESCRIPT() -- max.Script 
 	local script = Instance.new('Script')
 	script.Parent = max
 	script.Parent.MouseButton1Click:connect(function()
@@ -506,7 +506,7 @@ function SCRIPT_ZONB75_FAKESCRIPT() -- max.Script
 	
 	local function Notification(...)
 		playsound(140910211)
-		StarterGui:SetCore('SendNotification',...)
+		game.StarterGui:SetCore('SendNotification',...)
 	end
 	
 	Notification({Title='Loaded';Text='Max Toggled';Duration=4;Icon=''})
@@ -528,8 +528,8 @@ function SCRIPT_ZONB75_FAKESCRIPT() -- max.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ZONB75_FAKESCRIPT))
-function SCRIPT_EPHY70_FAKESCRIPT() -- aim.Script 
+coroutine.resume(coroutine.create(SCRIPT_XKQD69_FAKESCRIPT))
+function SCRIPT_PKYC84_FAKESCRIPT() -- aim.Script 
 	local script = Instance.new('Script')
 	script.Parent = aim
 	script.Parent.MouseButton1Click:connect(function()
@@ -1367,8 +1367,8 @@ function SCRIPT_EPHY70_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_EPHY70_FAKESCRIPT))
-function SCRIPT_HWEG65_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_PKYC84_FAKESCRIPT))
+function SCRIPT_JRPO68_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
@@ -1396,7 +1396,7 @@ function SCRIPT_HWEG65_FAKESCRIPT() -- speed.Script
 	
 	local function Notification(...)
 		playsound(140910211)
-		StarterGui:SetCore('SendNotification',...)
+		game.StarterGui:SetCore('SendNotification',...)
 	end
 	
 	Notification({Title='Loaded';Text='Speed Toggled';Duration=4;Icon=''})
@@ -1429,8 +1429,8 @@ function SCRIPT_HWEG65_FAKESCRIPT() -- speed.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_HWEG65_FAKESCRIPT))
-function SCRIPT_UYSR69_FAKESCRIPT() -- save.Script 
+coroutine.resume(coroutine.create(SCRIPT_JRPO68_FAKESCRIPT))
+function SCRIPT_WBSR71_FAKESCRIPT() -- save.Script 
 	local script = Instance.new('Script')
 	script.Parent = save
 	script.Parent.MouseButton1Click:connect(function()
@@ -1466,7 +1466,7 @@ function SCRIPT_UYSR69_FAKESCRIPT() -- save.Script
 	
 	local function Notification(...)
 		playsound(140910211)
-		StarterGui:SetCore('SendNotification',...)
+		game.StarterGui:SetCore('SendNotification',...)
 	end
 	
 	Notification({Title='Loaded';Text='Loot Save Toggled';Duration=4;Icon=''})
@@ -1499,8 +1499,8 @@ function SCRIPT_UYSR69_FAKESCRIPT() -- save.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_UYSR69_FAKESCRIPT))
-function SCRIPT_KZEC84_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_WBSR71_FAKESCRIPT))
+function SCRIPT_NGUL76_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
@@ -1523,8 +1523,8 @@ function SCRIPT_KZEC84_FAKESCRIPT() -- info.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_KZEC84_FAKESCRIPT))
-function SCRIPT_QRJW78_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_NGUL76_FAKESCRIPT))
+function SCRIPT_YZAL68_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1549,8 +1549,8 @@ function SCRIPT_QRJW78_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_QRJW78_FAKESCRIPT))
-function SCRIPT_USRQ72_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_YZAL68_FAKESCRIPT))
+function SCRIPT_JNCU72_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1575,8 +1575,8 @@ function SCRIPT_USRQ72_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_USRQ72_FAKESCRIPT))
-function SCRIPT_CPIC71_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_JNCU72_FAKESCRIPT))
+function SCRIPT_UDTQ77_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -1613,8 +1613,8 @@ function SCRIPT_CPIC71_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_CPIC71_FAKESCRIPT))
-function SCRIPT_BNLB79_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_UDTQ77_FAKESCRIPT))
+function SCRIPT_AIFG73_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -1625,8 +1625,8 @@ function SCRIPT_BNLB79_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_BNLB79_FAKESCRIPT))
-function SCRIPT_URKI81_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_AIFG73_FAKESCRIPT))
+function SCRIPT_BELI71_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -1651,4 +1651,4 @@ function SCRIPT_URKI81_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_URKI81_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_BELI71_FAKESCRIPT))
