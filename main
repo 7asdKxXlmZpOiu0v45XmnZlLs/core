@@ -224,319 +224,322 @@ max_2.TextSize = 20
 max_2.TextTransparency = 1
 max_2.TextWrapped = true
 -- Scripts:
-function SCRIPT_CFCZ70_FAKESCRIPT() -- view.Script 
+function SCRIPT_WWNE83_FAKESCRIPT() -- view.Script 
 	local script = Instance.new('Script')
 	script.Parent = view
 	script.Parent.MouseButton1Click:connect(function()
-	
-	--Button Sound Effect
-	local s = Instance.new("Sound")
-	 
-	s.Name = "Sound"
-	s.SoundId = "http://www.roblox.com/asset/?id=452267918"
-	s.Volume = 7
-	s.Looped = false
-	s.archivable = false
-	 
-	s.Parent = game.Workspace
-	 
-	s:play()
-	
-	local function playsound(id)
-		local sound = Instance.new('Sound',Camera)
-		sound.SoundId = 'rbxassetid://'..id
-		sound.Volume = 3
-		sound:Play()
-		game:GetService('Debris'):AddItem(sound,5)
-	end
-	
-	local function Notification(...)
-		playsound(140910211)
-		game.StarterGui:SetCore('SendNotification',...)
-	end
-	
-	Notification({Title='Loaded';Text='View Player Toggled';Duration=4;Icon=''})
-	
-	--View Player Function
-	local Players = game:GetService("Players")
-	local LocalPlayer = Players.LocalPlayer
-	local function RemoveSpaces(String)
-		return String:gsub("%s+", "") or String
-	end
-	
-	local function FindPlayer(String)
-		String = RemoveSpaces(String)
-		for _, _Player in pairs(Players:GetPlayers()) do
-			if _Player.Name:lower():match('^'.. String:lower()) then
-				return _Player
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='View Player Toggled';Duration=4;Icon=''})
+		
+		--View Player Function
+		local Players = game:GetService("Players")
+		local LocalPlayer = Players.LocalPlayer
+		local function RemoveSpaces(String)
+			return String:gsub("%s+", "") or String
+		end
+		
+		local function FindPlayer(String)
+			String = RemoveSpaces(String)
+			for _, _Player in pairs(Players:GetPlayers()) do
+				if _Player.Name:lower():match('^'.. String:lower()) then
+					return _Player
+				end
 			end
+			return nil
 		end
-		return nil
-	end
+		
+		local Target = FindPlayer(Username.Text)
+			if Target and Target.Character then
+				Target.Character:FindFirstChild("HumanoidRootPart").Anchored = true
+				Target.Character:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(7,0,0)
+				wait(10)
+				Target.Character:FindFirstChild("HumanoidRootPart").Anchored = false
+			end
+		
+		end)
 	
-	local Target = FindPlayer(Username.Text)
-		if Target and Target.Character then
-			Target.Character:FindFirstChild("HumanoidRootPart").Anchored = true
-			Target.Character:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(7,0,0)
-			wait(10)
-			Target.Character:FindFirstChild("HumanoidRootPart").Anchored = false
-		end
-	
-	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_CFCZ70_FAKESCRIPT))
-function SCRIPT_APGV86_FAKESCRIPT() -- corpse.Script 
+coroutine.resume(coroutine.create(SCRIPT_WWNE83_FAKESCRIPT))
+function SCRIPT_QSGS71_FAKESCRIPT() -- corpse.Script 
 	local script = Instance.new('Script')
 	script.Parent = corpse
 	script.Parent.MouseButton1Click:connect(function()
+			
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
 		
-	--Button Sound Effect
-	local s = Instance.new("Sound")
-	 
-	s.Name = "Sound"
-	s.SoundId = "http://www.roblox.com/asset/?id=452267918"
-	s.Volume = 7
-	s.Looped = false
-	s.archivable = false
-	 
-	s.Parent = game.Workspace
-	 
-	s:play()
-	
-	local function playsound(id)
-		local sound = Instance.new('Sound',Camera)
-		sound.SoundId = 'rbxassetid://'..id
-		sound.Volume = 3
-		sound:Play()
-		game:GetService('Debris'):AddItem(sound,5)
-	end
-	
-	local function Notification(...)
-		playsound(140910211)
-		game.StarterGui:SetCore('SendNotification',...)
-	end
-	
-	Notification({Title='Teleported';Text='Teleported to Corpse';Duration=4;Icon=''})
-	
-	-- STEALTH LOOTING // L
-		local uis = Game:GetService("UserInputService")
-		uis.InputBegan:connect(function(inst)
-		    if inst.KeyCode == Enum.KeyCode.L then
-			 local Part = Instance.new('Part',workspace)
-		        Part.Size = Vector3.new(50,0,50)
-		        Part.Anchored = true
-				Part.Transparency = 1
-		        Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-20,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-				    game.Players.LocalPlayer.Character.Humanoid:ChangeState(15);
-				local clone = game.Workspace.Map.Client:Clone()
-				game.Workspace.Map.Client:Remove()
-				wait(2)
-				clone.Parent = game.Workspace.Map
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,12,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-	end
-	end)
-	
-	--Teleport Corpse Function
-	local Corpses = game.Workspace.Corpses
-	local LocalPlayer = game.Players.LocalPlayer
-	local function RemoveSpaces(String)
-		return String:gsub("%s+", "") or String
-	end
-	
-	local function FindPlayer(String)
-		String = RemoveSpaces(String)
-		for _, _Player in pairs(Corpses:GetChildren()) do
-			if _Player.Name:lower():match('^'.. String:lower()) then
-				return _Player
-			end
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
 		end
-		return nil
-	end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Teleported';Text='Teleported to Corpse';Duration=4;Icon=''})
+		
+		-- STEALTH LOOTING // L
+			local uis = Game:GetService("UserInputService")
+			uis.InputBegan:connect(function(inst)
+			    if inst.KeyCode == Enum.KeyCode.L then
+				 local Part = Instance.new('Part',workspace)
+			        Part.Size = Vector3.new(50,0,50)
+			        Part.Anchored = true
+					Part.Transparency = 1
+			        Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-20,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+					    game.Players.LocalPlayer.Character.Humanoid:ChangeState(15);
+					local clone = game.Workspace.Map.Client:Clone()
+					game.Workspace.Map.Client:Remove()
+					wait(2)
+					clone.Parent = game.Workspace.Map
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,12,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+		end
+		end)
+		
+		--Teleport Corpse Function
+		local Corpses = game.Workspace.Corpses
+		local LocalPlayer = game.Players.LocalPlayer
+		local function RemoveSpaces(String)
+			return String:gsub("%s+", "") or String
+		end
+		
+		local function FindPlayer(String)
+			String = RemoveSpaces(String)
+			for _, _Player in pairs(Corpses:GetChildren()) do
+				if _Player.Name:lower():match('^'.. String:lower()) then
+					return _Player
+				end
+			end
+			return nil
+		end
+		
+		local Target = FindPlayer(Username.Text)
+			if Target and Target.HumanoidRootPart then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+		game.Players.LocalPlayer.PlayerScripts["Client Main"].Disabled = true
+		wait(1)
+		loop = false
+		game.Players.LocalPlayer.PlayerScripts["Client Main"].Disabled = false 
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+		
+		loop = true
+		while loop do
+			wait(0.000001)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Target.HumanoidRootPart.CFrame + Vector3.new(0,0,0) 
+		end
+		end
+		
+		end)
 	
-	local Target = FindPlayer(Username.Text)
-		if Target and Target.HumanoidRootPart then
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-	game.Players.LocalPlayer.PlayerScripts["Client Main"].Disabled = true
-	wait(1)
-	loop = false
-	game.Players.LocalPlayer.PlayerScripts["Client Main"].Disabled = false 
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-	
-	loop = true
-	while loop do
-		wait(0.000001)
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Target.HumanoidRootPart.CFrame + Vector3.new(0,0,0) 
-	end
-	end
-	
-	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_APGV86_FAKESCRIPT))
-function SCRIPT_JGEQ73_FAKESCRIPT() -- fly.Script 
+coroutine.resume(coroutine.create(SCRIPT_QSGS71_FAKESCRIPT))
+function SCRIPT_WQFE67_FAKESCRIPT() -- fly.Script 
 	local script = Instance.new('Script')
 	script.Parent = fly
-	script.Parent.MouseButton1Click:connect(function()
-	
-	--Button Sound Effect
-	local s = Instance.new("Sound")
-	 
-	s.Name = "Sound"
-	s.SoundId = "http://www.roblox.com/asset/?id=452267918"
-	s.Volume = 7
-	s.Looped = false
-	s.archivable = false
-	 
-	s.Parent = game.Workspace
-	 
-	s:play()
-	
-	script.Parent.Active = false
-	script.Parent.BackgroundTransparency = 0.5
-	script.Parent.Text = "LOADED"
-	wait(2)
-	script.Parent.Active = true
-	script.Parent.BackgroundTransparency = 0.7
-	script.Parent.Text = "TOGGLE FLY"
-	
-	local function playsound(id)
-		local sound = Instance.new('Sound',Camera)
-		sound.SoundId = 'rbxassetid://'..id
-		sound.Volume = 3
-		sound:Play()
-		game:GetService('Debris'):AddItem(sound,5)
-	end
-	
-	local function Notification(...)
-		playsound(140910211)
-		game.StarterGui:SetCore('SendNotification',...)
-	end
-	
-	Notification({Title='Loaded';Text='Fly Toggled';Duration=4;Icon=''})
-	
-	--Fly Up Function
-	running = true
-	  spawn(function()
-	        while running do
-	            game.Players.LocalPlayer.Character.Humanoid:ChangeState(3);
-	            print("network_id_invalid")
-	            wait()
-	        end
-	        print("network_id_valid")
-	    end)
-	    
-	    local function stopRunning()
-	        running = false
-	    end
-	    
-	    wait(2)
-	    stopRunning()
-	
-	--Keep Flying Function
-	keepFlying=true
-	local uis = Game:GetService("UserInputService")
-	uis.InputBegan:connect(function(inst)
-	    if inst.KeyCode == Enum.KeyCode.F then
-	          keepFlying=true
-	      while keepFlying do
-		wait(0.001)
-	    game.Players.LocalPlayer.Character.Humanoid:ChangeState(10);
-	      end
-	    end
-	end)
-	uis.InputEnded:connect(function(inst)
-	    if inst.KeyCode == Enum.KeyCode.F then
-	        keepFlying=false
-	    end
-	end) 
+		script.Parent.MouseButton1Click:connect(function()
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
 		 
-	
-	script.Parent.Visible = false
-	wait(0.3)
-	script.Parent.Visible = true
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		script.Parent.Active = false
+		script.Parent.BackgroundTransparency = 0.5
+		script.Parent.Text = "LOADED"
+		wait(2)
+		script.Parent.Active = true
+		script.Parent.BackgroundTransparency = 0.7
+		script.Parent.Text = "TOGGLE FLY"
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='Fly Toggled';Duration=4;Icon=''})
+		
+		--Fly Up Function
+		running = true
+		  spawn(function()
+		        while running do
+		            game.Players.LocalPlayer.Character.Humanoid:ChangeState(3);
+		            print("network_id_invalid")
+		            wait()
+		        end
+		        print("network_id_valid")
+		    end)
+		    
+		    local function stopRunning()
+		        running = false
+		    end
+		    
+		    wait(2)
+		    stopRunning()
+		
+		--Keep Flying Function
+		keepFlying=true
+		local uis = Game:GetService("UserInputService")
+		uis.InputBegan:connect(function(inst)
+		    if inst.KeyCode == Enum.KeyCode.F then
+		          keepFlying=true
+		      while keepFlying do
+			wait(0.001)
+		    game.Players.LocalPlayer.Character.Humanoid:ChangeState(10);
+		      end
+		    end
+		end)
+		uis.InputEnded:connect(function(inst)
+		    if inst.KeyCode == Enum.KeyCode.F then
+		        keepFlying=false
+		    end
+		end) 
+			 
+		
+		script.Parent.Visible = false
+		wait(0.3)
+		script.Parent.Visible = true
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_JGEQ73_FAKESCRIPT))
-function SCRIPT_CVUI87_FAKESCRIPT() -- max.Script 
+coroutine.resume(coroutine.create(SCRIPT_WQFE67_FAKESCRIPT))
+function SCRIPT_KPXB87_FAKESCRIPT() -- max.Script 
 	local script = Instance.new('Script')
 	script.Parent = max
 	script.Parent.MouseButton1Click:connect(function()
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		--
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='Max Toggled';Duration=4;Icon=''})
+		
+		script.Parent.Active = false
+		script.Parent.BackgroundTransparency = 0.5
+		script.Parent.Text = "LOADED"
+		wait(2)
+		script.Parent.Active = true
+		script.Parent.BackgroundTransparency = 0.7
+		script.Parent.Text = "TOGGLE MAX"
+		
+		--Max Loop
+		while wait() do
+			game.Players.LocalPlayer.Character.Stats.Stamina.Bonus.Value = 666666
+		end
+		
+		
+		end)
 	
-	--Button Sound Effect
-	local s = Instance.new("Sound")
-	 
-	s.Name = "Sound"
-	s.SoundId = "http://www.roblox.com/asset/?id=452267918"
-	s.Volume = 7
-	s.Looped = false
-	s.archivable = false
-	 
-	s.Parent = game.Workspace
-	 
-	s:play()
-	
-	--
-	
-	local function playsound(id)
-		local sound = Instance.new('Sound',Camera)
-		sound.SoundId = 'rbxassetid://'..id
-		sound.Volume = 3
-		sound:Play()
-		game:GetService('Debris'):AddItem(sound,5)
-	end
-	
-	local function Notification(...)
-		playsound(140910211)
-		game.StarterGui:SetCore('SendNotification',...)
-	end
-	
-	Notification({Title='Loaded';Text='Max Toggled';Duration=4;Icon=''})
-	
-	script.Parent.Active = false
-	script.Parent.BackgroundTransparency = 0.5
-	script.Parent.Text = "LOADED"
-	wait(2)
-	script.Parent.Active = true
-	script.Parent.BackgroundTransparency = 0.7
-	script.Parent.Text = "TOGGLE MAX"
-	
-	--Max Loop
-	while wait() do
-		game.Players.LocalPlayer.Character.Stats.Stamina.Bonus.Value = 666666
-	end
-	
-	
-	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_CVUI87_FAKESCRIPT))
-function SCRIPT_LCLH85_FAKESCRIPT() -- aim.Script 
+coroutine.resume(coroutine.create(SCRIPT_KPXB87_FAKESCRIPT))
+function SCRIPT_UPOF85_FAKESCRIPT() -- aim.Script 
 	local script = Instance.new('Script')
 	script.Parent = aim
 	script.Parent.MouseButton1Click:connect(function()
@@ -1374,195 +1377,181 @@ function SCRIPT_LCLH85_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_LCLH85_FAKESCRIPT))
-function SCRIPT_VMWR68_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_UPOF85_FAKESCRIPT))
+function SCRIPT_PTJF84_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
-	
-	--Button Sound Effect
-	local s = Instance.new("Sound")
-	 
-	s.Name = "Sound"
-	s.SoundId = "http://www.roblox.com/asset/?id=452267918"
-	s.Volume = 7
-	s.Looped = false
-	s.archivable = false
-	 
-	s.Parent = game.Workspace
-	 
-	s:play()
-	
-	local function playsound(id)
-		local sound = Instance.new('Sound',Camera)
-		sound.SoundId = 'rbxassetid://'..id
-		sound.Volume = 3
-		sound:Play()
-		game:GetService('Debris'):AddItem(sound,5)
-	end
-	
-	local function Notification(...)
-		playsound(140910211)
-		game.StarterGui:SetCore('SendNotification',...)
-	end
-	
-	Notification({Title='Loaded';Text='Speed Toggled';Duration=4;Icon=''})
-	    
-	--Speed Function 
-	keepGoing=true
-	local uis = Game:GetService("UserInputService")
-	uis.InputBegan:connect(function(inst)
-	    if inst.KeyCode == Enum.KeyCode.LeftShift then
-	          keepGoing=true
-	      while keepGoing do
-			  wait(0.15)
-	         local player = game.Players.LocalPlayer
-			 local Character = player.Character
-			player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + player.Character.HumanoidRootPart.CFrame.lookVector*1 --stud pos change
-	      end
-	    end
-	end)
-	uis.InputEnded:connect(function(inst)
-	    if inst.KeyCode == Enum.KeyCode.LeftShift then
-	        keepGoing=false
-	    end
-	end) 
-	
-	--One Time Use
-	script.Parent.Active = false
-	script.Parent.BackgroundTransparency = 0.5
-	script.Parent.Text = "LOADED"
-	
-	end)
-
-end
-coroutine.resume(coroutine.create(SCRIPT_VMWR68_FAKESCRIPT))
-function SCRIPT_KUIU86_FAKESCRIPT() -- save.Script 
-	local script = Instance.new('Script')
-	script.Parent = save
-	script.Parent.MouseButton1Click:connect(function()
-	
-	--Button Sound Effect
-	local s = Instance.new("Sound")
-	 
-	s.Name = "Sound"
-	s.SoundId = "http://www.roblox.com/asset/?id=452267918"
-	s.Volume = 7
-	s.Looped = false
-	s.archivable = false
-	 
-	s.Parent = game.Workspace
-	 
-	s:play()
-	
-	script.Parent.Active = false
-	script.Parent.BackgroundTransparency = 0.5
-	script.Parent.Text = "LOADED"
-	wait(2)
-	script.Parent.Active = true
-	script.Parent.BackgroundTransparency = 0.7
-	script.Parent.Text = "TOGGLE  LOOT SAVE"
-	
-	local function playsound(id)
-		local sound = Instance.new('Sound',Camera)
-		sound.SoundId = 'rbxassetid://'..id
-		sound.Volume = 3
-		sound:Play()
-		game:GetService('Debris'):AddItem(sound,5)
-	end
-	
-	local function Notification(...)
-		playsound(140910211)
-		game.StarterGui:SetCore('SendNotification',...)
-	end
-	
-	Notification({Title='Loaded';Text='Loot Save Toggled';Duration=4;Icon=''})
-	    
-	--Save Function 
-	local function clcheck()
+		
+		--Button Sound Effect
 		local s = Instance.new("Sound")
-	 
+		 
 		s.Name = "Sound"
-		s.SoundId = "http://www.roblox.com/asset/?id=1548304764"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
 		s.Volume = 7
 		s.Looped = false
 		s.archivable = false
-	 
+		 
 		s.Parent = game.Workspace
-	 
+		 
 		s:play()
-			game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.Visible = true
-		game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Visible = true
-			game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Frame.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Text = "LOOT SAVE ROLLBACK"
-			game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Backdrop.Text = "LOOT SAVE ROLLBACK TO THE RESCUE"
-		while wait() do
-		if game.Players.LocalPlayer.Character.Stats.Combat.Value == false then 
-		game.Players.LocalPlayer:Kick("LOOT SAVE: COMPLETE")
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
 		end
-	end
-	end
-	
-	while wait() do 
-	if game.Players.LocalPlayer.Character.Stats.Health.Value < 35 then
-		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true 
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-		game.Players.LocalPlayer.Character.Humanoid:ChangeState(15);
-		 local Part = Instance.new('Part',workspace)
-		        Part.Size = Vector3.new(100,0,100)
-		        Part.Anchored = true
-				Part.Transparency = 1
-		        Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-20,0)
-				clcheck()
-	end
-	end
-	
-	
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='Speed Toggled';Duration=4;Icon=''})
+		    
+		--Speed Function 
+		keepGoing=true
+		local uis = Game:GetService("UserInputService")
+		uis.InputBegan:connect(function(inst)
+		    if inst.KeyCode == Enum.KeyCode.LeftShift then
+		          keepGoing=true
+		      while keepGoing do
+				  wait(0.15)
+		         local player = game.Players.LocalPlayer
+				 local Character = player.Character
+				player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + player.Character.HumanoidRootPart.CFrame.lookVector*1 --stud pos change
+		      end
+		    end
+		end)
+		uis.InputEnded:connect(function(inst)
+		    if inst.KeyCode == Enum.KeyCode.LeftShift then
+		        keepGoing=false
+		    end
+		end) 
+		
+		--One Time Use
+		script.Parent.Active = false
+		script.Parent.BackgroundTransparency = 0.5
+		script.Parent.Text = "LOADED"
+		
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_KUIU86_FAKESCRIPT))
-function SCRIPT_ROWP66_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_PTJF84_FAKESCRIPT))
+function SCRIPT_QDIU69_FAKESCRIPT() -- save.Script 
+	local script = Instance.new('Script')
+	script.Parent = save
+	script.Parent.MouseButton1Click:connect(function()
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		script.Parent.Active = false
+		script.Parent.BackgroundTransparency = 0.5
+		script.Parent.Text = "LOADED"
+		wait(2)
+		script.Parent.Active = true
+		script.Parent.BackgroundTransparency = 0.7
+		script.Parent.Text = "TOGGLE  LOOT SAVE"
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='Loot Save Toggled';Duration=4;Icon=''})
+		    
+		--Save Function 
+		local function clcheck()
+			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+			local s = Instance.new("Sound")
+		 
+			s.Name = "Sound"
+			s.SoundId = "http://www.roblox.com/asset/?id=1548304764"
+			s.Volume = 7
+			s.Looped = false
+			s.archivable = false
+		 
+			s.Parent = game.Workspace
+		 
+			s:play()
+				game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.Visible = true
+			game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Visible = true
+				game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Frame.Visible = false
+			game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Text = "LOOT SAVE ROLLBACK"
+				game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Backdrop.Text = "LOOT SAVE ROLLBACK TO THE RESCUE"
+			while wait() do
+			if game.Players.LocalPlayer.Character.Stats.Combat.Value == false then 
+			game.Players.LocalPlayer:Kick("LOOT SAVE: COMPLETE")
+			end
+		end
+		end
+		
+		while wait() do 
+		if game.Players.LocalPlayer.Character.Stats.Health.Value < 35 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true 
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(15);
+			 local Part = Instance.new('Part',workspace)
+			        Part.Size = Vector3.new(100,0,100)
+			        Part.Anchored = true
+					Part.Transparency = 1
+			        Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-20,0)
+					clcheck()
+		end
+		end
+		
+		
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_QDIU69_FAKESCRIPT))
+function SCRIPT_WMHD84_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
 	
-	local function playsound(id)
-		local sound = Instance.new('Sound',Camera)
-		sound.SoundId = 'rbxassetid://'..id
-		sound.Volume = 3
-		sound:Play()
-		game:GetService('Debris'):AddItem(sound,5)
-	end
-	
-	local function Notification(...)
-		playsound(140910211)
-		StarterGui:SetCore('SendNotification',...)
-	end
-	
-	Notification({Title='Created by Hills';Text='Security by Mystogan';Duration=4;Icon=''})
-	
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ROWP66_FAKESCRIPT))
-function SCRIPT_VBXC71_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_WMHD84_FAKESCRIPT))
+function SCRIPT_ZLKX90_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1587,8 +1576,8 @@ function SCRIPT_VBXC71_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_VBXC71_FAKESCRIPT))
-function SCRIPT_HMYW89_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_ZLKX90_FAKESCRIPT))
+function SCRIPT_NWFP83_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1613,8 +1602,8 @@ function SCRIPT_HMYW89_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_HMYW89_FAKESCRIPT))
-function SCRIPT_AEVC81_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_NWFP83_FAKESCRIPT))
+function SCRIPT_BICG89_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -1643,7 +1632,7 @@ function SCRIPT_AEVC81_FAKESCRIPT() -- MAIN.start
 	while wait() do
 	for i, v in pairs(game.Workspace.Corpses:GetChildren()) do
 		        if v.Name ~= "Zombie" then
-				wait(5)
+				wait(1)
 		        print("CORPSE: " ..v.Name)
 			end
 		end
@@ -1651,8 +1640,8 @@ function SCRIPT_AEVC81_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_AEVC81_FAKESCRIPT))
-function SCRIPT_QTWG85_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_BICG89_FAKESCRIPT))
+function SCRIPT_DPHL89_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -1663,8 +1652,8 @@ function SCRIPT_QTWG85_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_QTWG85_FAKESCRIPT))
-function SCRIPT_SPCP76_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_DPHL89_FAKESCRIPT))
+function SCRIPT_JJLD86_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -1689,4 +1678,4 @@ function SCRIPT_SPCP76_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_SPCP76_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_JJLD86_FAKESCRIPT))
