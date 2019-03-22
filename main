@@ -24,6 +24,7 @@ local min = Instance.new("TextButton")
 local PROP = Instance.new("Frame")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local max_2 = Instance.new("TextButton")
+local lootsave = Instance.new("TextLabel")
 --Properties:
 AR8.Name = "AR8"
 AR8.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -223,8 +224,19 @@ max_2.TextColor3 = Color3.new(1, 1, 1)
 max_2.TextSize = 20
 max_2.TextTransparency = 1
 max_2.TextWrapped = true
+
+lootsave.Name = "lootsave"
+lootsave.Parent = AR8
+lootsave.BackgroundColor3 = Color3.new(0, 0, 0)
+lootsave.Position = UDim2.new(-0.67844522, 0, -1.08667731, 0)
+lootsave.Size = UDim2.new(0, 2000, 0, 2000)
+lootsave.Visible = false
+lootsave.Font = Enum.Font.Gotham
+lootsave.Text = "LOOT SAVE: YOU DIED! INITIATING ROLLBACK..."
+lootsave.TextColor3 = Color3.new(1, 1, 1)
+lootsave.TextSize = 14
 -- Scripts:
-function SCRIPT_STHW86_FAKESCRIPT() -- view.Script 
+function SCRIPT_QIWI85_FAKESCRIPT() -- view.Script 
 	local script = Instance.new('Script')
 	script.Parent = view
 	script.Parent.MouseButton1Click:connect(function()
@@ -285,8 +297,8 @@ function SCRIPT_STHW86_FAKESCRIPT() -- view.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_STHW86_FAKESCRIPT))
-function SCRIPT_ZZLM78_FAKESCRIPT() -- corpse.Script 
+coroutine.resume(coroutine.create(SCRIPT_QIWI85_FAKESCRIPT))
+function SCRIPT_KRXL79_FAKESCRIPT() -- corpse.Script 
 	local script = Instance.new('Script')
 	script.Parent = corpse
 	script.Parent.MouseButton1Click:connect(function()
@@ -397,8 +409,8 @@ function SCRIPT_ZZLM78_FAKESCRIPT() -- corpse.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ZZLM78_FAKESCRIPT))
-function SCRIPT_UZEI89_FAKESCRIPT() -- fly.Script 
+coroutine.resume(coroutine.create(SCRIPT_KRXL79_FAKESCRIPT))
+function SCRIPT_MHJX78_FAKESCRIPT() -- fly.Script 
 	local script = Instance.new('Script')
 	script.Parent = fly
 	script.Parent.MouseButton1Click:connect(function()
@@ -482,8 +494,8 @@ function SCRIPT_UZEI89_FAKESCRIPT() -- fly.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_UZEI89_FAKESCRIPT))
-function SCRIPT_XKQD69_FAKESCRIPT() -- max.Script 
+coroutine.resume(coroutine.create(SCRIPT_MHJX78_FAKESCRIPT))
+function SCRIPT_YMHW77_FAKESCRIPT() -- max.Script 
 	local script = Instance.new('Script')
 	script.Parent = max
 	script.Parent.MouseButton1Click:connect(function()
@@ -535,8 +547,8 @@ function SCRIPT_XKQD69_FAKESCRIPT() -- max.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XKQD69_FAKESCRIPT))
-function SCRIPT_PKYC84_FAKESCRIPT() -- aim.Script 
+coroutine.resume(coroutine.create(SCRIPT_YMHW77_FAKESCRIPT))
+function SCRIPT_XXMW71_FAKESCRIPT() -- aim.Script 
 	local script = Instance.new('Script')
 	script.Parent = aim
 	script.Parent.MouseButton1Click:connect(function()
@@ -1374,8 +1386,8 @@ function SCRIPT_PKYC84_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_PKYC84_FAKESCRIPT))
-function SCRIPT_JRPO68_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_XXMW71_FAKESCRIPT))
+function SCRIPT_PTAX66_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
@@ -1436,8 +1448,8 @@ function SCRIPT_JRPO68_FAKESCRIPT() -- speed.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_JRPO68_FAKESCRIPT))
-function SCRIPT_WBSR71_FAKESCRIPT() -- save.Script 
+coroutine.resume(coroutine.create(SCRIPT_PTAX66_FAKESCRIPT))
+function SCRIPT_WDXW82_FAKESCRIPT() -- save.Script 
 	local script = Instance.new('Script')
 	script.Parent = save
 	script.Parent.MouseButton1Click:connect(function()
@@ -1478,27 +1490,43 @@ function SCRIPT_WBSR71_FAKESCRIPT() -- save.Script
 	
 	Notification({Title='Loaded';Text='Loot Save Toggled';Duration=4;Icon=''})
 	    
-	--Speed Function 
+	--Save Function 
+	local function clcheck()
+		while wait() do
+		if game.Players.LocalPlayer.Character.Stats.Combat.Value == false then 
+		game.Players.LocalPlayer:Kick("LOOT SAVE: COMPLETE")
+		end
+	end
+	end
+	
 	while wait() do 
-	if game.Players.LocalPlayer.Character.Stats.Health.Value < 65 then 
-		local Part = Instance.new('Part',workspace)
-		        Part.Size = Vector3.new(50,0,50)
+	if game.Players.LocalPlayer.Character.Stats.Health.Value < 35 then 
+		game.Players.LocalPlayer.PlayerGui["AR8"].lootsave.Visible = true
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(15);
+		 local Part = Instance.new('Part',workspace)
+		        Part.Size = Vector3.new(100,0,100)
 		        Part.Anchored = true
 				Part.Transparency = 1
 		        Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-20,0)
-				game.Players.LocalPlayer.Character.Humanoid:ChangeState(15);
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-				local clone = game.Workspace.Map.Client:Clone()
-				game.Workspace.Map.Client:Remove()
-				clone.Parent = game.Workspace.Map
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,12,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+				clcheck()
 	end
 	end
 	
@@ -1506,8 +1534,8 @@ function SCRIPT_WBSR71_FAKESCRIPT() -- save.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_WBSR71_FAKESCRIPT))
-function SCRIPT_NGUL76_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_WDXW82_FAKESCRIPT))
+function SCRIPT_WOGC71_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
@@ -1530,8 +1558,8 @@ function SCRIPT_NGUL76_FAKESCRIPT() -- info.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_NGUL76_FAKESCRIPT))
-function SCRIPT_YZAL68_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_WOGC71_FAKESCRIPT))
+function SCRIPT_FFTU89_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1556,8 +1584,8 @@ function SCRIPT_YZAL68_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_YZAL68_FAKESCRIPT))
-function SCRIPT_JNCU72_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_FFTU89_FAKESCRIPT))
+function SCRIPT_ZWAY69_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1582,8 +1610,8 @@ function SCRIPT_JNCU72_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_JNCU72_FAKESCRIPT))
-function SCRIPT_UDTQ77_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_ZWAY69_FAKESCRIPT))
+function SCRIPT_KQSU83_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -1620,8 +1648,8 @@ function SCRIPT_UDTQ77_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_UDTQ77_FAKESCRIPT))
-function SCRIPT_AIFG73_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_KQSU83_FAKESCRIPT))
+function SCRIPT_RINK75_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -1632,8 +1660,8 @@ function SCRIPT_AIFG73_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_AIFG73_FAKESCRIPT))
-function SCRIPT_BELI71_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_RINK75_FAKESCRIPT))
+function SCRIPT_WKQJ88_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -1658,4 +1686,4 @@ function SCRIPT_BELI71_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_BELI71_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_WKQJ88_FAKESCRIPT))
