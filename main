@@ -24,7 +24,6 @@ local min = Instance.new("TextButton")
 local PROP = Instance.new("Frame")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local max_2 = Instance.new("TextButton")
-local lootsave = Instance.new("TextLabel")
 --Properties:
 AR8.Name = "AR8"
 AR8.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -224,20 +223,8 @@ max_2.TextColor3 = Color3.new(1, 1, 1)
 max_2.TextSize = 20
 max_2.TextTransparency = 1
 max_2.TextWrapped = true
-
-lootsave.Name = "lootsave"
-lootsave.Parent = AR8
-lootsave.BackgroundColor3 = Color3.new(0, 0, 0)
-lootsave.Position = UDim2.new(0.216725558, 0, 0.396468699, 0)
-lootsave.Size = UDim2.new(0, 500, 0, 129)
-lootsave.Visible = false
-lootsave.ZIndex = 50
-lootsave.Font = Enum.Font.Gotham
-lootsave.Text = "LOOT SAVE: YOU DIED! INITIATING ROLLBACK..."
-lootsave.TextColor3 = Color3.new(1, 1, 1)
-lootsave.TextSize = 14
 -- Scripts:
-function SCRIPT_JODX87_FAKESCRIPT() -- view.Script 
+function SCRIPT_QXCK90_FAKESCRIPT() -- view.Script 
 	local script = Instance.new('Script')
 	script.Parent = view
 	script.Parent.MouseButton1Click:connect(function()
@@ -298,8 +285,8 @@ function SCRIPT_JODX87_FAKESCRIPT() -- view.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_JODX87_FAKESCRIPT))
-function SCRIPT_NUUE85_FAKESCRIPT() -- corpse.Script 
+coroutine.resume(coroutine.create(SCRIPT_QXCK90_FAKESCRIPT))
+function SCRIPT_OOLW83_FAKESCRIPT() -- corpse.Script 
 	local script = Instance.new('Script')
 	script.Parent = corpse
 	script.Parent.MouseButton1Click:connect(function()
@@ -410,8 +397,8 @@ function SCRIPT_NUUE85_FAKESCRIPT() -- corpse.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_NUUE85_FAKESCRIPT))
-function SCRIPT_VGWF65_FAKESCRIPT() -- fly.Script 
+coroutine.resume(coroutine.create(SCRIPT_OOLW83_FAKESCRIPT))
+function SCRIPT_ZCUF76_FAKESCRIPT() -- fly.Script 
 	local script = Instance.new('Script')
 	script.Parent = fly
 	script.Parent.MouseButton1Click:connect(function()
@@ -495,8 +482,8 @@ function SCRIPT_VGWF65_FAKESCRIPT() -- fly.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_VGWF65_FAKESCRIPT))
-function SCRIPT_MQKB87_FAKESCRIPT() -- max.Script 
+coroutine.resume(coroutine.create(SCRIPT_ZCUF76_FAKESCRIPT))
+function SCRIPT_PUOE71_FAKESCRIPT() -- max.Script 
 	local script = Instance.new('Script')
 	script.Parent = max
 	script.Parent.MouseButton1Click:connect(function()
@@ -548,8 +535,8 @@ function SCRIPT_MQKB87_FAKESCRIPT() -- max.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_MQKB87_FAKESCRIPT))
-function SCRIPT_ASKI81_FAKESCRIPT() -- aim.Script 
+coroutine.resume(coroutine.create(SCRIPT_PUOE71_FAKESCRIPT))
+function SCRIPT_HKWP76_FAKESCRIPT() -- aim.Script 
 	local script = Instance.new('Script')
 	script.Parent = aim
 	script.Parent.MouseButton1Click:connect(function()
@@ -1387,8 +1374,8 @@ function SCRIPT_ASKI81_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ASKI81_FAKESCRIPT))
-function SCRIPT_VJFT84_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_HKWP76_FAKESCRIPT))
+function SCRIPT_VERV85_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
@@ -1449,8 +1436,8 @@ function SCRIPT_VJFT84_FAKESCRIPT() -- speed.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_VJFT84_FAKESCRIPT))
-function SCRIPT_JGXD72_FAKESCRIPT() -- save.Script 
+coroutine.resume(coroutine.create(SCRIPT_VERV85_FAKESCRIPT))
+function SCRIPT_JCKI72_FAKESCRIPT() -- save.Script 
 	local script = Instance.new('Script')
 	script.Parent = save
 	script.Parent.MouseButton1Click:connect(function()
@@ -1502,8 +1489,6 @@ function SCRIPT_JGXD72_FAKESCRIPT() -- save.Script
 	
 	while wait() do 
 	if game.Players.LocalPlayer.Character.Stats.Health.Value < 35 then 
-		game.Players.LocalPlayer.PlayerGui["AR8"].lootsave.Visible = true
-		playsound(1548304764)
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
@@ -1529,6 +1514,22 @@ function SCRIPT_JGXD72_FAKESCRIPT() -- save.Script
 				Part.Transparency = 1
 		        Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-20,0)
 				clcheck()
+				local s = Instance.new("Sound")
+	 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=1548304764"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+	 
+		s.Parent = game.Workspace
+	 
+		s:play()
+			game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.Visible = true
+		game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Visible = true
+			game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Frame.Visible = false
+		game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Text = "LOOT SAVE ROLLBACK"
+			game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Backdrop.Text = "LOOT SAVE ROLLBACK TO THE RESCUE"
 	end
 	end
 	
@@ -1536,8 +1537,8 @@ function SCRIPT_JGXD72_FAKESCRIPT() -- save.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_JGXD72_FAKESCRIPT))
-function SCRIPT_AOVU74_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_JCKI72_FAKESCRIPT))
+function SCRIPT_GYKM79_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
@@ -1560,8 +1561,8 @@ function SCRIPT_AOVU74_FAKESCRIPT() -- info.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_AOVU74_FAKESCRIPT))
-function SCRIPT_UHWF79_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_GYKM79_FAKESCRIPT))
+function SCRIPT_IPLP66_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1586,8 +1587,8 @@ function SCRIPT_UHWF79_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_UHWF79_FAKESCRIPT))
-function SCRIPT_CJPT74_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_IPLP66_FAKESCRIPT))
+function SCRIPT_SIPW81_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1612,8 +1613,8 @@ function SCRIPT_CJPT74_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_CJPT74_FAKESCRIPT))
-function SCRIPT_KTYU73_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_SIPW81_FAKESCRIPT))
+function SCRIPT_UXDU90_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -1650,8 +1651,8 @@ function SCRIPT_KTYU73_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_KTYU73_FAKESCRIPT))
-function SCRIPT_PONW77_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_UXDU90_FAKESCRIPT))
+function SCRIPT_GZZI89_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -1662,8 +1663,8 @@ function SCRIPT_PONW77_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_PONW77_FAKESCRIPT))
-function SCRIPT_RQGG80_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_GZZI89_FAKESCRIPT))
+function SCRIPT_KEGD76_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -1688,4 +1689,4 @@ function SCRIPT_RQGG80_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_RQGG80_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_KEGD76_FAKESCRIPT))
