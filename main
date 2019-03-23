@@ -1798,7 +1798,7 @@ function SCRIPT_OGIV79_FAKESCRIPT() -- AR8.hubmap
 	local script = Instance.new('Script')
 	script.Parent = AR8
 		--HubGen Map
-			game.Players.LocalPlayer.PlayerGui["Interface Main"].Map.Map.Icon.Image = ("rbxassetid://2989893502")
+			game.Players.LocalPlayer.PlayerGui["Interface Main"].Map.Map.Icon.Image = ("rbxassetid://2992712300")
 			game.Players.LocalPlayer.PlayerGui["Interface Main"].Map.Map.Icon.ScaleType = ("Stretch")
 		
 	
