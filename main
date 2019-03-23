@@ -934,6 +934,934 @@ function SCRIPT_UPMK74_FAKESCRIPT() -- aim.Script
 	Mouse.Move:Connect(function()
 		cursor = ESP:FindFirstChild('Cursor') or Instance.new('Frame',ESP)
 		cursor.Name = 'Cursor'
+-- Instances:
+local AR8 = Instance.new("ScreenGui")
+local MAIN = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local view = Instance.new("TextButton")
+local Username = Instance.new("TextBox")
+local corpse = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local fly = Instance.new("TextButton")
+local max = Instance.new("TextButton")
+local aim = Instance.new("TextButton")
+local speed = Instance.new("TextButton")
+local save = Instance.new("TextButton")
+local hub = Instance.new("TextButton")
+local info = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local min = Instance.new("TextButton")
+local PROP = Instance.new("Frame")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local max_2 = Instance.new("TextButton")
+--Properties:
+AR8.Name = "AR8"
+AR8.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+MAIN.Name = "MAIN"
+MAIN.Parent = AR8
+MAIN.BackgroundColor3 = Color3.new(1, 1, 1)
+MAIN.BackgroundTransparency = 1
+MAIN.Position = UDim2.new(999999, 99999999, 9999999, 9999999)
+MAIN.Size = UDim2.new(0, 281, 0, 453)
+MAIN.Visible = false
+
+ImageLabel.Parent = MAIN
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.Position = UDim2.new(0.0872374773, 0, 0.0684326738, 0)
+ImageLabel.Size = UDim2.new(0, 241, 0, 420)
+ImageLabel.Image = "rbxassetid://2968933244"
+
+view.Name = "view"
+view.Parent = ImageLabel
+view.BackgroundColor3 = Color3.new(0, 1, 0.0823529)
+view.BackgroundTransparency = 1
+view.BorderColor3 = Color3.new(1, 1, 1)
+view.Position = UDim2.new(0.0757836327, 0, 0.430571407, 0)
+view.Size = UDim2.new(0, 98, 0, 25)
+view.ZIndex = 9
+view.Font = Enum.Font.SourceSans
+view.Text = "Login"
+view.TextColor3 = Color3.new(1, 1, 1)
+view.TextSize = 14
+view.TextTransparency = 1
+
+Username.Name = "Username"
+Username.Parent = view
+Username.BackgroundColor3 = Color3.new(0, 0, 0)
+Username.BackgroundTransparency = 1
+Username.Position = UDim2.new(-0.0322246924, 0, -0.95007509, 0)
+Username.Size = UDim2.new(0, 182, 0, 23)
+Username.ZIndex = 9
+Username.Font = Enum.Font.SourceSans
+Username.Text = ""
+Username.TextColor3 = Color3.new(1, 1, 1)
+Username.TextSize = 14
+Username.TextStrokeColor3 = Color3.new(1, 1, 1)
+
+corpse.Name = "corpse"
+corpse.Parent = ImageLabel
+corpse.BackgroundColor3 = Color3.new(0, 1, 0.0823529)
+corpse.BackgroundTransparency = 1
+corpse.BorderColor3 = Color3.new(1, 1, 1)
+corpse.Position = UDim2.new(0.486572027, 0, 0.428652436, 0)
+corpse.Size = UDim2.new(0, 105, 0, 25)
+corpse.ZIndex = 9
+corpse.Font = Enum.Font.SourceSans
+corpse.Text = "Login"
+corpse.TextColor3 = Color3.new(1, 1, 1)
+corpse.TextSize = 14
+corpse.TextTransparency = 1
+
+ScrollingFrame.Parent = ImageLabel
+ScrollingFrame.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
+ScrollingFrame.Position = UDim2.new(0.0746887997, 0, 0.111904763, 0)
+ScrollingFrame.Size = UDim2.new(0, 204, 0, 94)
+
+fly.Name = "fly"
+fly.Parent = ScrollingFrame
+fly.BackgroundColor3 = Color3.new(0, 0, 0)
+fly.BackgroundTransparency = 0.69999998807907
+fly.Position = UDim2.new(0, 0, 0.00600000005, 0)
+fly.Size = UDim2.new(0, 157, 0, 27)
+fly.Font = Enum.Font.SourceSans
+fly.Text = "TOGGLE FLY"
+fly.TextColor3 = Color3.new(1, 1, 1)
+fly.TextSize = 14
+fly.TextWrapped = true
+
+max.Name = "max"
+max.Parent = ScrollingFrame
+max.BackgroundColor3 = Color3.new(0, 0, 0)
+max.BackgroundTransparency = 0.69999998807907
+max.Position = UDim2.new(0, 0, 0.0500000007, 0)
+max.Size = UDim2.new(0, 157, 0, 32)
+max.Font = Enum.Font.SourceSans
+max.Text = "TOGGLE MAX"
+max.TextColor3 = Color3.new(1, 1, 1)
+max.TextSize = 14
+max.TextWrapped = true
+
+aim.Name = "aim"
+aim.Parent = ScrollingFrame
+aim.BackgroundColor3 = Color3.new(0, 0, 0)
+aim.BackgroundTransparency = 0.69999998807907
+aim.Position = UDim2.new(0, 0, 0.100000001, 0)
+aim.Size = UDim2.new(0, 157, 0, 32)
+aim.Font = Enum.Font.SourceSans
+aim.Text = "TOGGLE AAA"
+aim.TextColor3 = Color3.new(1, 1, 1)
+aim.TextSize = 14
+aim.TextWrapped = true
+
+speed.Name = "speed"
+speed.Parent = ScrollingFrame
+speed.BackgroundColor3 = Color3.new(0, 0, 0)
+speed.BackgroundTransparency = 0.69999998807907
+speed.Position = UDim2.new(0, 0, 0.150000006, 0)
+speed.Size = UDim2.new(0, 157, 0, 32)
+speed.Font = Enum.Font.SourceSans
+speed.Text = "TOGGLE SPEED"
+speed.TextColor3 = Color3.new(1, 1, 1)
+speed.TextSize = 14
+speed.TextWrapped = true
+
+save.Name = "save"
+save.Parent = ScrollingFrame
+save.BackgroundColor3 = Color3.new(0, 0, 0)
+save.BackgroundTransparency = 0.69999998807907
+save.Position = UDim2.new(0, 0, 0.200000003, 0)
+save.Size = UDim2.new(0, 157, 0, 32)
+save.Font = Enum.Font.SourceSans
+save.Text = "TOGGLE  LOOT SAVE"
+save.TextColor3 = Color3.new(1, 1, 1)
+save.TextSize = 14
+save.TextWrapped = true
+
+hub.Name = "hub"
+hub.Parent = ScrollingFrame
+hub.BackgroundColor3 = Color3.new(0, 0, 0)
+hub.BackgroundTransparency = 0.69999998807907
+hub.Position = UDim2.new(0, 0, 0.25, 0)
+hub.Size = UDim2.new(0, 157, 0, 32)
+hub.Font = Enum.Font.SourceSans
+hub.Text = "SPAWN AT HUB"
+hub.TextColor3 = Color3.new(1, 1, 1)
+hub.TextSize = 14
+hub.TextWrapped = true
+
+info.Name = "info"
+info.Parent = ImageLabel
+info.BackgroundColor3 = Color3.new(0.215686, 1, 0)
+info.BackgroundTransparency = 1
+info.BorderColor3 = Color3.new(0, 1, 0)
+info.Position = UDim2.new(0.821428835, 0, 0.37041685, 0)
+info.Size = UDim2.new(0, 23, 0, 25)
+info.ZIndex = 2
+info.Font = Enum.Font.SourceSans
+info.Text = "?"
+info.TextColor3 = Color3.new(1, 1, 1)
+info.TextSize = 20
+info.TextTransparency = 1
+info.TextWrapped = true
+
+close.Name = "close"
+close.Parent = ImageLabel
+close.BackgroundColor3 = Color3.new(0.215686, 1, 0)
+close.BackgroundTransparency = 1
+close.BorderColor3 = Color3.new(0, 1, 0)
+close.Position = UDim2.new(0.858773232, 0, 0.0254310332, 0)
+close.Size = UDim2.new(0, 22, 0, 20)
+close.ZIndex = 2
+close.Font = Enum.Font.SourceSans
+close.Text = "?"
+close.TextColor3 = Color3.new(1, 1, 1)
+close.TextSize = 20
+close.TextTransparency = 1
+close.TextWrapped = true
+
+min.Name = "min"
+min.Parent = ImageLabel
+min.BackgroundColor3 = Color3.new(0.215686, 1, 0)
+min.BackgroundTransparency = 1
+min.BorderColor3 = Color3.new(0, 1, 0)
+min.Position = UDim2.new(0.754964888, 0, 0.0278119761, 0)
+min.Size = UDim2.new(0, 18, 0, 19)
+min.ZIndex = 2
+min.Font = Enum.Font.SourceSans
+min.Text = "?"
+min.TextColor3 = Color3.new(1, 1, 1)
+min.TextSize = 20
+min.TextTransparency = 1
+min.TextWrapped = true
+
+PROP.Name = "PROP"
+PROP.Parent = AR8
+PROP.BackgroundColor3 = Color3.new(1, 1, 1)
+PROP.BackgroundTransparency = 1
+PROP.Position = UDim2.new(9999, 9999, 9999, 9999)
+PROP.Size = UDim2.new(0, 252, 0, 252)
+PROP.Visible = false
+
+ImageLabel_2.Parent = PROP
+ImageLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_2.BackgroundTransparency = 1
+ImageLabel_2.Position = UDim2.new(0.0951739848, 0, 0.122392744, 0)
+ImageLabel_2.Size = UDim2.new(0, 241, 0, 420)
+ImageLabel_2.Image = "rbxassetid://2968933792"
+
+max_2.Name = "max"
+max_2.Parent = PROP
+max_2.BackgroundColor3 = Color3.new(0.215686, 1, 0)
+max_2.BackgroundTransparency = 1
+max_2.BorderColor3 = Color3.new(0, 1, 0)
+max_2.Position = UDim2.new(0.817460299, 0, 0.155555546, 0)
+max_2.Size = UDim2.new(0, 19, 0, 22)
+max_2.ZIndex = 2
+max_2.Font = Enum.Font.SourceSans
+max_2.Text = "?"
+max_2.TextColor3 = Color3.new(1, 1, 1)
+max_2.TextSize = 20
+max_2.TextTransparency = 1
+max_2.TextWrapped = true
+-- Scripts:
+function SCRIPT_MOCZ80_FAKESCRIPT() -- view.Script 
+	local script = Instance.new('Script')
+	script.Parent = view
+	script.Parent.MouseButton1Click:connect(function()
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='View Player Toggled';Duration=4;Icon=''})
+		
+		--View Player Function
+		local Players = game:GetService("Players")
+		local LocalPlayer = Players.LocalPlayer
+		local function RemoveSpaces(String)
+			return String:gsub("%s+", "") or String
+		end
+		
+		local function FindPlayer(String)
+			String = RemoveSpaces(String)
+			for _, _Player in pairs(Players:GetPlayers()) do
+				if _Player.Name:lower():match('^'.. String:lower()) then
+					return _Player
+				end
+			end
+			return nil
+		end
+		
+		local Target = FindPlayer(Username.Text)
+			if Target and Target.Character then
+				Target.Character:FindFirstChild("HumanoidRootPart").Anchored = true
+				Target.Character:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(7,0,0)
+				wait(10)
+				Target.Character:FindFirstChild("HumanoidRootPart").Anchored = false
+			end
+		
+		end)
+	
+
+end
+coroutine.resume(coroutine.create(SCRIPT_MOCZ80_FAKESCRIPT))
+function SCRIPT_TANI87_FAKESCRIPT() -- corpse.Script 
+	local script = Instance.new('Script')
+	script.Parent = corpse
+	script.Parent.MouseButton1Click:connect(function()
+			
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Teleported';Text='Teleported to Corpse';Duration=4;Icon=''})
+		
+		-- STEALTH LOOTING // L
+			local uis = Game:GetService("UserInputService")
+			uis.InputBegan:connect(function(inst)
+			    if inst.KeyCode == Enum.KeyCode.L then
+				 local Part = Instance.new('Part',workspace)
+			        Part.Size = Vector3.new(50,0,50)
+			        Part.Anchored = true
+					Part.Transparency = 1
+			        Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-20,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-10,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+					    game.Players.LocalPlayer.Character.Humanoid:ChangeState(15);
+					local clone = game.Workspace.Map.Client:Clone()
+					game.Workspace.Map.Client:Remove()
+					wait(2)
+					clone.Parent = game.Workspace.Map
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,12,0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+		end
+		end)
+		
+		--Teleport Corpse Function
+		local Corpses = game.Workspace.Corpses
+		local LocalPlayer = game.Players.LocalPlayer
+		local function RemoveSpaces(String)
+			return String:gsub("%s+", "") or String
+		end
+		
+		local function FindPlayer(String)
+			String = RemoveSpaces(String)
+			for _, _Player in pairs(Corpses:GetChildren()) do
+				if _Player.Name:lower():match('^'.. String:lower()) then
+					return _Player
+				end
+			end
+			return nil
+		end
+		
+		local Target = FindPlayer(Username.Text)
+			if Target and Target.HumanoidRootPart then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+		game.Players.LocalPlayer.PlayerScripts["Client Main"].Disabled = true
+		wait(1)
+		loop = false
+		game.Players.LocalPlayer.PlayerScripts["Client Main"].Disabled = false 
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+		
+		loop = true
+		while loop do
+			wait(0.000001)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Target.HumanoidRootPart.CFrame + Vector3.new(0,0,0) 
+		end
+		end
+		
+		end)
+	
+
+end
+coroutine.resume(coroutine.create(SCRIPT_TANI87_FAKESCRIPT))
+function SCRIPT_RNCT72_FAKESCRIPT() -- fly.Script 
+	local script = Instance.new('Script')
+	script.Parent = fly
+		script.Parent.MouseButton1Click:connect(function()
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		script.Parent.Active = false
+		script.Parent.BackgroundTransparency = 0.5
+		script.Parent.Text = "LOADED"
+		wait(2)
+		script.Parent.Active = true
+		script.Parent.BackgroundTransparency = 0.7
+		script.Parent.Text = "TOGGLE FLY"
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='Fly Toggled';Duration=4;Icon=''})
+		
+		--Fly Up Function
+		running = true
+		  spawn(function()
+		        while running do
+		            game.Players.LocalPlayer.Character.Humanoid:ChangeState(3);
+		            print("network_id_invalid")
+		            wait()
+		        end
+		        print("network_id_valid")
+		    end)
+		    
+		    local function stopRunning()
+		        running = false
+		    end
+		    
+		    wait(2)
+		    stopRunning()
+		
+		--Keep Flying Function
+		keepFlying=true
+		local uis = Game:GetService("UserInputService")
+		uis.InputBegan:connect(function(inst)
+		    if inst.KeyCode == Enum.KeyCode.F then
+		          keepFlying=true
+		      while keepFlying do
+			wait(0.001)
+		    game.Players.LocalPlayer.Character.Humanoid:ChangeState(10);
+		      end
+		    end
+		end)
+		uis.InputEnded:connect(function(inst)
+		    if inst.KeyCode == Enum.KeyCode.F then
+		        keepFlying=false
+		    end
+		end) 
+			 
+		
+		script.Parent.Visible = false
+		wait(0.3)
+		script.Parent.Visible = true
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_RNCT72_FAKESCRIPT))
+function SCRIPT_AUPW82_FAKESCRIPT() -- max.Script 
+	local script = Instance.new('Script')
+	script.Parent = max
+	script.Parent.MouseButton1Click:connect(function()
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		--
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='Max Toggled';Duration=4;Icon=''})
+		
+		script.Parent.Active = false
+		script.Parent.BackgroundTransparency = 0.5
+		script.Parent.Text = "LOADED"
+		wait(2)
+		script.Parent.Active = true
+		script.Parent.BackgroundTransparency = 0.7
+		script.Parent.Text = "TOGGLE MAX"
+		
+		--Max Loop
+		while wait() do
+			game.Players.LocalPlayer.Character.Stats.Stamina.Bonus.Value = 666666
+		end
+		
+		
+		end)
+	
+
+end
+coroutine.resume(coroutine.create(SCRIPT_AUPW82_FAKESCRIPT))
+function SCRIPT_XEDD78_FAKESCRIPT() -- aim.Script 
+	local script = Instance.new('Script')
+	script.Parent = aim
+	script.Parent.MouseButton1Click:connect(function()
+	
+	--Button Sound Effect
+	local s = Instance.new("Sound")
+	 
+	s.Name = "Sound"
+	s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+	s.Volume = 7
+	s.Looped = false
+	s.archivable = false
+	 
+	s.Parent = game.Workspace
+	 
+	s:play()
+	
+	--One Time Use
+	script.Parent.Active = false
+	script.Parent.BackgroundTransparency = 0.5
+	script.Parent.Text = "LOADED"
+	
+	--AAA
+	local UIS = game:GetService('UserInputService')
+	local RS = game:GetService('RunService')
+	local Players = game:GetService('Players')
+	local StarterGui = game:GetService('StarterGui')
+	local Player = Players.LocalPlayer
+	local Studio = RS:IsStudio()
+	local PlayerGui = RS:IsStudio() and Player:WaitForChild('PlayerGui') or game.CoreGui
+	local Mouse = Player:GetMouse()
+	local old_icon = Mouse.Icon
+	local Camera = workspace.CurrentCamera
+	targetpart = 'Head' -- Don't change this.
+	-- It can be changed with the targetpart_change hotkey ingame.
+	local target
+	local target_old
+	local alert = false
+	local lockedon = false
+	local settingkey = false
+	local upvals = nil
+	local val = 1
+	local windows = {}
+	local function hb() RS.Heartbeat:wait() end
+	
+	local version = 1.2
+	local Spawn = nil or game.PlaceId == 292439477 and workspace:WaitForChild('Lobby',2):WaitForChild('Spawn1',2)
+	local spawned = false
+	
+	script.Name = 'ApocAimAssist'
+	Mouse.TargetFilter = Camera
+	
+	-- hotkey
+	toggle_aim = Enum.UserInputType.MouseButton2
+	toggle_aimbot = Enum.KeyCode.Q
+	toggle_trigger = Enum.KeyCode.F12
+	toggle_esp = Enum.KeyCode.End
+	toggle_gui = Enum.KeyCode.F11
+	toggle_bottompos = Enum.KeyCode.F7
+	toggle_performance = Enum.KeyCode.F8
+	toggle_bones = Enum.KeyCode.B
+	toggle_chams = Enum.KeyCode.V
+	toggle_tracers = Enum.KeyCode.T
+	toggle_boxes = Enum.KeyCode.X
+	toggle_font = Enum.KeyCode.F1
+	ffatoggle = Enum.KeyCode.F6
+	targetpart_change = Enum.KeyCode.BackSlash
+	priority_toggle = Enum.KeyCode.Insert
+	sethotkey = Enum.KeyCode.F10
+	fov_increase = Enum.KeyCode.KeypadPlus
+	fov_decrease = Enum.KeyCode.KeypadMinus
+	-- aim sens (how smooth your crosshair will move)
+	sens_increase = Enum.KeyCode.RightBracket
+	sens_decrease = Enum.KeyCode.LeftBracket
+	
+	-- parts
+	parts = {
+		'Head';
+		'Torso'
+	}
+	
+	fonts = {
+		Enum.Font.SourceSansBold,
+		Enum.Font.Cartoon,
+		Enum.Font.Arcade,
+		Enum.Font.SciFi,
+		Enum.Font.Fantasy,
+		Enum.Font.Code,
+		Enum.Font.Highway,
+		Enum.Font.Bodoni
+	}
+	
+	textSet = false
+	
+	currentfont = 1
+	ffa = true
+	hidden = false
+	performancemode = false
+	-- aim
+	fov = 5
+	sens = .25
+	drop = .45
+	aim_toggled = false
+	bottompos = true
+	aim_priority = 2
+	-- [2] FOV or [1] Distance
+	aimingcolor = Color3.fromRGB(0,165,255)
+	aimbot_toggled = true
+	aim_line = true
+	locksoundid = 538769304
+	mouseiconid =  273146939
+	
+	-- trigger
+	trigger_toggled = false
+	trigger_delay = 1/20
+	
+	-- esp
+	esp_toggled = true
+	esp_bones = true
+	esp_chams = false
+	esp_tracers = true
+	-- item_esp (coming soon)
+	linesize = 1
+	showdists = true
+	textsize = 14
+	textoffset = 20
+	visiblecolor = Color3.fromRGB(173, 51, 161)
+	hiddencolor = Color3.fromRGB(107, 50, 124)
+	headboxsize = 4
+	headboxaimsize = 6
+	headboxshape = 'diamond'
+	-- rectangle or diamond
+	
+	-- box esp
+	bounding_box = true
+	-- box_pointsize = 0 [UNUSED]
+	box_line_size = 1
+	-- box_line_size_visible = 2 [UNUSED]
+	
+	local GUI = Instance.new('ScreenGui',PlayerGui)
+	GUI.Name = 'ApocAimAssist '..version
+	GUI.ResetOnSpawn = false
+	
+	ESP = Instance.new('Folder',GUI)
+	ESP.Name = 'ESP'
+	local Bottom = Instance.new('Frame',ESP)
+	Bottom.Name = 'Bottom'
+	Bottom.BackgroundTransparency = 1
+	Bottom.Size = UDim2.new(0,1,0,1)
+	Bottom.Position = UDim2.new(.5,0,1,1)
+	
+	local Status = Instance.new('TextLabel',GUI)
+	Status.Name = 'Status'
+	Status.BackgroundTransparency = 1
+	Status.Size = UDim2.new(0,500,0,50)
+	Status.Position = UDim2.new(.5,-250,.85,0)
+	Status.TextSize = 24
+	Status.Font = Enum.Font.SourceSansBold
+	Status.TextColor3 = Color3.new(1,1,1)
+	Status.TextStrokeColor3 = Color3.new(0,0,0)
+	Status.TextStrokeTransparency = .6
+	Status.Text = 'On Standby'
+	Status.ZIndex = 50
+	
+	local Credits = Status:Clone()
+	Credits.Name = 'Credits'
+	Credits.Parent = GUI
+	Credits.Position = UDim2.new(.5,-250,.85,-20)
+	Credits.TextSize = 16
+	Credits.Text = 'ApocAimAssist '..version..' by Hills!'
+	
+	local FovGui = Instance.new('ImageLabel',GUI)
+	FovGui.Name = 'FovGui'
+	FovGui.Image = 'rbxassetid://324848180'
+	FovGui.Size = UDim2.new(0,(Camera.ViewportSize.X/(90/fov))*2,0,(Camera.ViewportSize.X/(90/fov))*2)
+	FovGui.Position = UDim2.new(0.5,-FovGui.AbsoluteSize.X/2,0.5,-FovGui.AbsoluteSize.Y/2)
+	FovGui.BackgroundTransparency = 1
+	FovGui.ImageTransparency = 1
+	FovGui.ImageColor3 = Color3.new(1,0,0)
+	
+	local Indicator = Instance.new('TextLabel',GUI)
+	Indicator.Name = 'Indicator'
+	Indicator.Font = Enum.Font.SourceSans
+	Indicator.TextSize = 14
+	Indicator.TextXAlignment = Enum.TextXAlignment.Center
+	Indicator.TextYAlignment = Enum.TextYAlignment.Center
+	Indicator.TextStrokeTransparency = .75
+	Indicator.Visible = false
+	Indicator.Text = aim_priority>1 and 'FOV: '..fov or 'Distance'
+	
+	local SensAdjust = Instance.new('TextBox',GUI)
+	SensAdjust.Name = 'SensAdjust'
+	SensAdjust.Font = Enum.Font.SourceSans
+	SensAdjust.BackgroundTransparency = .75
+	SensAdjust.BackgroundColor3 = Color3.new(0,0,0)
+	SensAdjust.BorderColor3 = Color3.new(1,1,1)
+	SensAdjust.Size = UDim2.new(0,50,0,20)
+	SensAdjust.TextStrokeTransparency = .6
+	SensAdjust.TextColor3 = Color3.new(1,1,1)
+	SensAdjust.TextSize = 14
+	SensAdjust.PlaceholderText = 'Sens'
+	SensAdjust.Visible = false
+	SensAdjust.Text = tonumber(sens)
+	SensAdjust.Position = Credits.Position + UDim2.new(0,250,0,75)
+	
+	local SensLabel = Instance.new('TextLabel',SensAdjust)
+	SensLabel.Name = 'SensLabel'
+	SensLabel.Font = Enum.Font.SourceSans
+	SensLabel.Size = UDim2.new(1,0,1,0)
+	SensLabel.BackgroundTransparency = 1
+	SensLabel.TextSize = 14
+	SensLabel.TextColor3 = Color3.new(1,1,1)
+	SensLabel.TextStrokeColor3 = Color3.new(0,0,0)
+	SensLabel.TextStrokeTransparency = .6
+	SensLabel.Text = 'Sens:'
+	SensLabel.Position = UDim2.new(-1,0,0,0)
+	SensLabel.TextXAlignment = Enum.TextXAlignment.Left
+	SensLabel.Visible = false
+	
+	local FovAdjust = SensAdjust:Clone()
+	FovAdjust.Parent = GUI
+	FovAdjust.PlaceholderText = 'FOV'
+	FovAdjust.Name = 'FovAdjust'
+	FovAdjust.Text = tonumber(fov)
+	FovAdjust.Position = SensAdjust.Position + UDim2.new(0,0,0,20)
+	FovAdjust.SensLabel.Name = 'FovLabel'
+	FovAdjust.FovLabel.Text = 'Fov:'
+	FovAdjust.Visible = false
+	
+	local DropAdjust = SensAdjust:Clone()
+	DropAdjust.Parent = GUI
+	DropAdjust.PlaceholderText = 'Drop'
+	DropAdjust.Name = 'DropAdjust'
+	DropAdjust.Text = tonumber(drop)
+	DropAdjust.Position = SensAdjust.Position + UDim2.new(0,0,0,40)
+	DropAdjust.SensLabel.Name = 'DropLabel'
+	DropAdjust.DropLabel.Text = 'Drop:'
+	DropAdjust.Visible = false
+	
+	local KeysList = Instance.new('TextLabel',GUI)
+	KeysList.Name = 'KeysList'
+	KeysList.Font = Enum.Font.SourceSans
+	KeysList.TextStrokeTransparency = .6
+	KeysList.TextSize = 14
+	KeysList.TextColor3 = Color3.new(1,1,1)
+	KeysList.Size = UDim2.new(0,0,1,0)
+	KeysList.Position = UDim2.new(0,5,0,-280)
+	KeysList.BackgroundTransparency = 1
+	KeysList.Active = false
+	KeysList.Visible = false
+	KeysList.TextXAlignment = Enum.TextXAlignment.Left
+	KeysList.TextYAlignment = Enum.TextYAlignment.Bottom
+	KeysList.Text = ''
+	
+	local n = 0
+	
+	spawn(function()
+		while Status do
+			Indicator.TextColor3 = Color3.fromHSV(n,.5,1)
+			FovGui.ImageColor3 = Indicator.TextColor3
+			if not textSet then
+			if aim_toggled and target then
+				Status.TextColor3 = aimingcolor
+				Status.Text = (' '..target.Name)
+			else
+				Status.TextColor3 = Color3.fromHSV(n,.5,1)
+				Status.Text = ' '
+				--Hide Shit Loop
+				while wait() do
+				Status.Visible = false
+				Credits.Visible = false
+				KeysList.Visible = false
+		end
+			end
+			end
+			n = (n+.005)%1
+			hb()
+		end
+	end)
+	
+	SensAdjust.InputEnded:Connect(function() if SensAdjust.Text~='' then sens = tonumber(SensAdjust.Text)>0 and tonumber(SensAdjust.Text) or sens end end)
+	FovAdjust.InputEnded:Connect(function() if FovAdjust.Text~='' then fov = tonumber(FovAdjust.Text)>0 and tonumber(FovAdjust.Text) or fov
+	FovGui:TweenSize(UDim2.new(0,(Camera.ViewportSize.X/(90/fov))*2,0,(Camera.ViewportSize.X/(90/fov))*2),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.1,true) end end)
+	DropAdjust.InputEnded:Connect(function() if DropAdjust.Text~='' then drop = tonumber(DropAdjust.Text)>=0 and tonumber(DropAdjust.Text) or drop end end)
+	
+	local function distfromspawn(x)
+		if Spawn then
+			return x:DistanceFromCharacter(Spawn.Position)
+		else
+			return 201
+		end
+	end
+	
+	local function setText(text)
+		spawn(function()
+		textSet = true
+		Status.Text = text
+		Status.TextColor3 = Color3.new(1,1,1)
+		wait(#text/4)
+		textSet = false
+		end)
+	end
+	
+	local function playsound(id)
+		local sound = Instance.new('Sound',Camera)
+		sound.SoundId = 'rbxassetid://'..id
+		sound.Volume = 3
+		sound:Play()
+		game:GetService('Debris'):AddItem(sound,5)
+	end
+	
+	playsound(1168009121)
+	Mouse.Icon = 'rbxassetid://'..mouseiconid
+	
+	local function Notification(...)
+		playsound(140910211)
+		StarterGui:SetCore('SendNotification',...)
+	end
+	
+	local function DrawLine(Folder,P1,P2,Thickness,Color,LineTransparency,BorderThickness,BorderColor)
+		-- Declare variables
+		local Point1,Point2 = P1.Position,P2.Position
+		if Point1 and Point2 then
+		local X,Y = Camera.ViewportSize.X, Camera.ViewportSize.Y
+		local X1,X2 = (X * Point1.X.Scale + Point1.X.Offset + P1.Size.X.Offset/2), (X * Point2.X.Scale + Point2.X.Offset + P2.Size.X.Offset/2)
+		local Y1,Y2 = (Y * Point1.Y.Scale + Point1.Y.Offset + P1.Size.Y.Offset/2), (Y * Point2.Y.Scale + Point2.Y.Offset + P2.Size.Y.Offset/2)
+		local MidX,MidY = (X1+X2)/2, (Y1+Y2)/2
+		-- Set defaults to prevent errors
+		Thickness = Thickness or 1
+		Color = Color or Color3.new(1,1,1)
+		LineTransparency =  LineTransparency or 0
+		BorderThickness = BorderThickness or 0
+		BorderColor = BorderColor or Color3.new(0,0,0)
+		-- Draw the line
+		local Line = Folder:FindFirstChild(P1.Name..'-'..P2.Name) or Instance.new('Frame',Folder)
+		Line.Visible = false
+		Line.BackgroundTransparency = LineTransparency
+		Line.BorderSizePixel = BorderThickness
+		Line.BorderColor3 = BorderColor
+		Line.Size = UDim2.new(0,(Vector2.new(X1,Y1) - Vector2.new(X2,Y2)).magnitude-1,0,Thickness)
+		Line.Position = UDim2.new(0,MidX-Line.AbsoluteSize.X/2,0,MidY-Line.AbsoluteSize.Y)
+		Line.BackgroundColor3 = Color
+		Line.Rotation = math.deg(math.atan2((Y2-Y1),(X2-X1)))
+		Line.Name = P1.Name..'-'..P2.Name
+		Line.Visible = true
+		return Line
+		else
+			return nil
+		end
+	end
+	
+	local function GetNearest(Mode)
+		local lowest,nearest,gui = math.huge,nil,nil
+		if Mode==1 then
+		for _,plr in next,Players:GetPlayers() do 
+			if plr.Name~=Player.Name and plr.Character~=nil and plr.Character:FindFirstChild(targetpart) then
+				local dist = Player:DistanceFromCharacter(plr.Character[targetpart].Position)
+				local ray = Ray.new(Player.Character.Head.Position,(plr.Character[targetpart].Position-Player.Character.Head.Position).unit*5000)
+				local part,point = workspace:FindPartOnRayWithIgnoreList(ray,{Camera,Player.Character,unpack(windows)})
+				local Z = Camera:WorldToScreenPoint(plr.Character[targetpart].Position).Z
+				if part and part:IsDescendantOf(plr.Character) and Z>0 and dist < lowest and (ffa or plr.TeamColor~=Player.TeamColor) then lowest = dist nearest = plr.Character end
+			end
+		end
+		elseif Mode==2 then
+			for _,plr in next,Players:GetPlayers() do
+				if plr.Name~=Player.Name and plr.Character~=nil and plr.Character:FindFirstChild(targetpart) then
+					local pos = Camera:WorldToScreenPoint(plr.Character[targetpart].Position)
+					local ray = Ray.new(Player.Character[targetpart].Position,(plr.Character[targetpart].Position-Player.Character[targetpart].Position).unit*2048)
+					local part,point = workspace:FindPartOnRayWithIgnoreList(ray,{Camera,Player.Character,unpack(windows)})
+					local dist = (Vector2.new(Mouse.X,Mouse.Y)-Vector2.new(pos.X,pos.Y)).magnitude
+					if part and part:IsDescendantOf(plr.Character) and pos.Z>0 and dist <= Camera.ViewportSize.X/(90/fov) and dist < lowest and (ffa or plr.TeamColor~=Player.TeamColor) then lowest = dist nearest = plr.Character end
+				end
+			end
+		end
+		return nearest
+	end
+		
+	Mouse.Move:Connect(function()
+		cursor = ESP:FindFirstChild('Cursor') or Instance.new('Frame',ESP)
+		cursor.Name = 'Cursor'
 		cursor.BackgroundTransparency = 1
 		cursor.Size = UDim2.new(0,1,0,1)
 		cursor.Position = UDim2.new(0,Mouse.X,0,Mouse.Y)
@@ -1391,8 +2319,8 @@ function SCRIPT_UPMK74_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_UPMK74_FAKESCRIPT))
-function SCRIPT_ZUFC89_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_XEDD78_FAKESCRIPT))
+function SCRIPT_FPWV83_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
@@ -1453,8 +2381,8 @@ function SCRIPT_ZUFC89_FAKESCRIPT() -- speed.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ZUFC89_FAKESCRIPT))
-function SCRIPT_UIAM76_FAKESCRIPT() -- save.Script 
+coroutine.resume(coroutine.create(SCRIPT_FPWV83_FAKESCRIPT))
+function SCRIPT_AIGZ65_FAKESCRIPT() -- save.Script 
 	local script = Instance.new('Script')
 	script.Parent = save
 	script.Parent.MouseButton1Click:connect(function()
@@ -1556,8 +2484,8 @@ function SCRIPT_UIAM76_FAKESCRIPT() -- save.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_UIAM76_FAKESCRIPT))
-function SCRIPT_YTIS81_FAKESCRIPT() -- hub.Script 
+coroutine.resume(coroutine.create(SCRIPT_AIGZ65_FAKESCRIPT))
+function SCRIPT_JAVK73_FAKESCRIPT() -- hub.Script 
 	local script = Instance.new('Script')
 	script.Parent = hub
 	script.Parent.MouseButton1Click:connect(function()
@@ -1603,14 +2531,15 @@ function SCRIPT_YTIS81_FAKESCRIPT() -- hub.Script
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Position = Vector3.new(1331.0556640625, 2611.3967285156, 1616.8410644531)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+		wait(1)
 		game.Players.LocalPlayer:Kick("SPAWN SET AT HUB")
 		
 		
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_YTIS81_FAKESCRIPT))
-function SCRIPT_ATTV67_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_JAVK73_FAKESCRIPT))
+function SCRIPT_AADT75_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
@@ -1636,8 +2565,8 @@ function SCRIPT_ATTV67_FAKESCRIPT() -- info.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ATTV67_FAKESCRIPT))
-function SCRIPT_HIRL65_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_AADT75_FAKESCRIPT))
+function SCRIPT_KGFQ66_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1662,8 +2591,8 @@ function SCRIPT_HIRL65_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_HIRL65_FAKESCRIPT))
-function SCRIPT_KLQA75_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_KGFQ66_FAKESCRIPT))
+function SCRIPT_UYNM65_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1688,8 +2617,8 @@ function SCRIPT_KLQA75_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_KLQA75_FAKESCRIPT))
-function SCRIPT_PLMN80_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_UYNM65_FAKESCRIPT))
+function SCRIPT_ITLP86_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -1726,8 +2655,8 @@ function SCRIPT_PLMN80_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_PLMN80_FAKESCRIPT))
-function SCRIPT_SGPI85_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_ITLP86_FAKESCRIPT))
+function SCRIPT_MPAY68_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -1738,8 +2667,8 @@ function SCRIPT_SGPI85_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_SGPI85_FAKESCRIPT))
-function SCRIPT_BAFF80_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_MPAY68_FAKESCRIPT))
+function SCRIPT_DXDJ79_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -1764,8 +2693,8 @@ function SCRIPT_BAFF80_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_BAFF80_FAKESCRIPT))
-function SCRIPT_FKFH67_FAKESCRIPT() -- AR8.logger2 
+coroutine.resume(coroutine.create(SCRIPT_DXDJ79_FAKESCRIPT))
+function SCRIPT_GFHT86_FAKESCRIPT() -- AR8.logger2 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	--Logger
@@ -1779,8 +2708,8 @@ function SCRIPT_FKFH67_FAKESCRIPT() -- AR8.logger2
 		
 
 end
-coroutine.resume(coroutine.create(SCRIPT_FKFH67_FAKESCRIPT))
-function SCRIPT_XIRK80_FAKESCRIPT() -- AR8.spawncheck 
+coroutine.resume(coroutine.create(SCRIPT_GFHT86_FAKESCRIPT))
+function SCRIPT_UCRJ84_FAKESCRIPT() -- AR8.spawncheck 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	if game.Players.LocalPlayer.PlayerGui["Interface Main"]["Main Menu"].Visible == false then
@@ -1797,4 +2726,4 @@ function SCRIPT_XIRK80_FAKESCRIPT() -- AR8.spawncheck
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XIRK80_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_UCRJ84_FAKESCRIPT))
