@@ -237,7 +237,7 @@ max_2.TextSize = 20
 max_2.TextTransparency = 1
 max_2.TextWrapped = true
 -- Scripts:
-function SCRIPT_MQWB76_FAKESCRIPT() -- view.Script 
+function SCRIPT_BIQV88_FAKESCRIPT() -- view.Script 
 	local script = Instance.new('Script')
 	script.Parent = view
 	script.Parent.MouseButton1Click:connect(function()
@@ -299,8 +299,8 @@ function SCRIPT_MQWB76_FAKESCRIPT() -- view.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_MQWB76_FAKESCRIPT))
-function SCRIPT_MBRH83_FAKESCRIPT() -- corpse.Script 
+coroutine.resume(coroutine.create(SCRIPT_BIQV88_FAKESCRIPT))
+function SCRIPT_BCMN83_FAKESCRIPT() -- corpse.Script 
 	local script = Instance.new('Script')
 	script.Parent = corpse
 	script.Parent.MouseButton1Click:connect(function()
@@ -412,8 +412,8 @@ function SCRIPT_MBRH83_FAKESCRIPT() -- corpse.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_MBRH83_FAKESCRIPT))
-function SCRIPT_SMRV78_FAKESCRIPT() -- fly.Script 
+coroutine.resume(coroutine.create(SCRIPT_BCMN83_FAKESCRIPT))
+function SCRIPT_KMTM84_FAKESCRIPT() -- fly.Script 
 	local script = Instance.new('Script')
 	script.Parent = fly
 		script.Parent.MouseButton1Click:connect(function()
@@ -497,8 +497,8 @@ function SCRIPT_SMRV78_FAKESCRIPT() -- fly.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_SMRV78_FAKESCRIPT))
-function SCRIPT_CLUY82_FAKESCRIPT() -- max.Script 
+coroutine.resume(coroutine.create(SCRIPT_KMTM84_FAKESCRIPT))
+function SCRIPT_HSYP75_FAKESCRIPT() -- max.Script 
 	local script = Instance.new('Script')
 	script.Parent = max
 	script.Parent.MouseButton1Click:connect(function()
@@ -551,8 +551,8 @@ function SCRIPT_CLUY82_FAKESCRIPT() -- max.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_CLUY82_FAKESCRIPT))
-function SCRIPT_INCA65_FAKESCRIPT() -- aim.Script 
+coroutine.resume(coroutine.create(SCRIPT_HSYP75_FAKESCRIPT))
+function SCRIPT_YAYR88_FAKESCRIPT() -- aim.Script 
 	local script = Instance.new('Script')
 	script.Parent = aim
 	script.Parent.MouseButton1Click:connect(function()
@@ -606,22 +606,22 @@ function SCRIPT_INCA65_FAKESCRIPT() -- aim.Script
 	Mouse.TargetFilter = Camera
 	
 	-- hotkey
+	toggle_font = Enum.KeyCode.F12
 	toggle_aim = Enum.UserInputType.MouseButton2
 	toggle_aimbot = Enum.KeyCode.Q
 	toggle_trigger = Enum.KeyCode.F12
 	toggle_esp = Enum.KeyCode.End
-	toggle_gui = Enum.KeyCode.F11
-	toggle_bottompos = Enum.KeyCode.F7
-	toggle_performance = Enum.KeyCode.F8
-	toggle_bones = Enum.KeyCode.B
-	toggle_chams = Enum.KeyCode.V
+	toggle_gui = Enum.KeyCode.F10
+	toggle_bottompos = Enum.KeyCode.F12
+	toggle_performance = Enum.KeyCode.F12
+	toggle_bones = Enum.KeyCode.F12
+	toggle_chams = Enum.KeyCode.F12
 	toggle_tracers = Enum.KeyCode.T
-	toggle_boxes = Enum.KeyCode.X
-	toggle_font = Enum.KeyCode.F1
+	toggle_boxes = Enum.KeyCode.B
 	ffatoggle = Enum.KeyCode.F6
 	targetpart_change = Enum.KeyCode.BackSlash
 	priority_toggle = Enum.KeyCode.Insert
-	sethotkey = Enum.KeyCode.F10
+	sethotkey = Enum.KeyCode.F12
 	fov_increase = Enum.KeyCode.KeypadPlus
 	fov_decrease = Enum.KeyCode.KeypadMinus
 	-- aim sens (how smooth your crosshair will move)
@@ -941,7 +941,7 @@ function SCRIPT_INCA65_FAKESCRIPT() -- aim.Script
 	UIS.InputBegan:Connect(function(Input)
 		if Input.KeyCode == toggle_aim or Input.UserInputType == toggle_aim then
 			aim_toggled = true
-			warn('GS: aim toggled',aim_toggled and 'on' or 'off')
+			warn('AAA: status',aim_toggled and 'on' or 'off')
 			alert = true
 			while aim_toggled and aimbot_toggled do
 				target = GetNearest(aim_priority)
@@ -1390,8 +1390,8 @@ function SCRIPT_INCA65_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_INCA65_FAKESCRIPT))
-function SCRIPT_CTCZ78_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_YAYR88_FAKESCRIPT))
+function SCRIPT_KOTB82_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
@@ -1452,8 +1452,8 @@ function SCRIPT_CTCZ78_FAKESCRIPT() -- speed.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_CTCZ78_FAKESCRIPT))
-function SCRIPT_MJAS84_FAKESCRIPT() -- save.Script 
+coroutine.resume(coroutine.create(SCRIPT_KOTB82_FAKESCRIPT))
+function SCRIPT_DOVH68_FAKESCRIPT() -- save.Script 
 	local script = Instance.new('Script')
 	script.Parent = save
 	script.Parent.MouseButton1Click:connect(function()
@@ -1538,8 +1538,8 @@ function SCRIPT_MJAS84_FAKESCRIPT() -- save.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_MJAS84_FAKESCRIPT))
-function SCRIPT_RFXY88_FAKESCRIPT() -- hub.Script 
+coroutine.resume(coroutine.create(SCRIPT_DOVH68_FAKESCRIPT))
+function SCRIPT_YBLA83_FAKESCRIPT() -- hub.Script 
 	local script = Instance.new('Script')
 	script.Parent = hub
 	script.Parent.MouseButton1Click:connect(function()
@@ -1592,8 +1592,8 @@ function SCRIPT_RFXY88_FAKESCRIPT() -- hub.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_RFXY88_FAKESCRIPT))
-function SCRIPT_TGTV86_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_YBLA83_FAKESCRIPT))
+function SCRIPT_WOWA83_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
@@ -1619,8 +1619,8 @@ function SCRIPT_TGTV86_FAKESCRIPT() -- info.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_TGTV86_FAKESCRIPT))
-function SCRIPT_QJJV83_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_WOWA83_FAKESCRIPT))
+function SCRIPT_UNAD90_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1645,8 +1645,8 @@ function SCRIPT_QJJV83_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_QJJV83_FAKESCRIPT))
-function SCRIPT_EBDU73_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_UNAD90_FAKESCRIPT))
+function SCRIPT_GEPD69_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1671,8 +1671,8 @@ function SCRIPT_EBDU73_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_EBDU73_FAKESCRIPT))
-function SCRIPT_KECS82_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_GEPD69_FAKESCRIPT))
+function SCRIPT_GVJI75_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -1709,8 +1709,8 @@ function SCRIPT_KECS82_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_KECS82_FAKESCRIPT))
-function SCRIPT_GDBN72_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_GVJI75_FAKESCRIPT))
+function SCRIPT_WIML79_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -1721,8 +1721,8 @@ function SCRIPT_GDBN72_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_GDBN72_FAKESCRIPT))
-function SCRIPT_USNY72_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_WIML79_FAKESCRIPT))
+function SCRIPT_UCVZ81_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -1747,8 +1747,8 @@ function SCRIPT_USNY72_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_USNY72_FAKESCRIPT))
-function SCRIPT_VUVP76_FAKESCRIPT() -- AR8.logger2 
+coroutine.resume(coroutine.create(SCRIPT_UCVZ81_FAKESCRIPT))
+function SCRIPT_XVES80_FAKESCRIPT() -- AR8.logger2 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	--Logger
@@ -1758,8 +1758,8 @@ function SCRIPT_VUVP76_FAKESCRIPT() -- AR8.logger2
 		
 
 end
-coroutine.resume(coroutine.create(SCRIPT_VUVP76_FAKESCRIPT))
-function SCRIPT_OEBV72_FAKESCRIPT() -- AR8.spawncheck 
+coroutine.resume(coroutine.create(SCRIPT_XVES80_FAKESCRIPT))
+function SCRIPT_JRTK66_FAKESCRIPT() -- AR8.spawncheck 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	if game.Players.LocalPlayer.PlayerGui["Interface Main"]["Main Menu"].Visible == false then
@@ -1776,8 +1776,8 @@ function SCRIPT_OEBV72_FAKESCRIPT() -- AR8.spawncheck
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_OEBV72_FAKESCRIPT))
-function SCRIPT_DQXT77_FAKESCRIPT() -- AR8.hubmap 
+coroutine.resume(coroutine.create(SCRIPT_JRTK66_FAKESCRIPT))
+function SCRIPT_SPMS65_FAKESCRIPT() -- AR8.hubmap 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 		--HubGen Map
@@ -1787,5 +1787,4 @@ function SCRIPT_DQXT77_FAKESCRIPT() -- AR8.hubmap
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_DQXT77_FAKESCRIPT))
-
+coroutine.resume(coroutine.create(SCRIPT_SPMS65_FAKESCRIPT))
