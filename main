@@ -21,6 +21,7 @@ local save = Instance.new("TextButton")
 local hub = Instance.new("TextButton")
 local ma = Instance.new("TextButton")
 local uni = Instance.new("TextButton")
+local esp = Instance.new("TextButton")
 local info = Instance.new("TextButton")
 local close = Instance.new("TextButton")
 local min = Instance.new("TextButton")
@@ -36,7 +37,7 @@ MAIN.Name = "MAIN"
 MAIN.Parent = AR8
 MAIN.BackgroundColor3 = Color3.new(1, 1, 1)
 MAIN.BackgroundTransparency = 1
-MAIN.Position = UDim2.new(99999, 999999, 999999, 999999)
+MAIN.Position = UDim2.new(99999, 99999, 99999, 99999)
 MAIN.Size = UDim2.new(0, 281, 0, 453)
 MAIN.Visible = false
 
@@ -92,7 +93,7 @@ ScrollingFrame.Parent = ImageLabel
 ScrollingFrame.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
 ScrollingFrame.Position = UDim2.new(0.0746887997, 0, 0.111904763, 0)
 ScrollingFrame.Size = UDim2.new(0, 204, 0, 94)
-ScrollingFrame.CanvasPosition = Vector2.new(0, 117.5)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 188)
 
 fly.Name = "fly"
 fly.Parent = ScrollingFrame
@@ -125,7 +126,7 @@ aim.BackgroundTransparency = 0.69999998807907
 aim.Position = UDim2.new(0, 0, 0.100000001, 0)
 aim.Size = UDim2.new(0, 157, 0, 32)
 aim.Font = Enum.Font.SourceSans
-aim.Text = "TOGGLE AAA"
+aim.Text = "TOGGLE AIM-ASSIST"
 aim.TextColor3 = Color3.new(1, 1, 1)
 aim.TextSize = 14
 aim.TextWrapped = true
@@ -158,7 +159,7 @@ hub.Name = "hub"
 hub.Parent = ScrollingFrame
 hub.BackgroundColor3 = Color3.new(0, 0, 0)
 hub.BackgroundTransparency = 0.69999998807907
-hub.Position = UDim2.new(0, 0, 0.25, 0)
+hub.Position = UDim2.new(0, 0, 0.300000012, 0)
 hub.Size = UDim2.new(0, 157, 0, 32)
 hub.Font = Enum.Font.SourceSans
 hub.Text = "SPAWN AT HUB"
@@ -170,7 +171,7 @@ ma.Name = "ma"
 ma.Parent = ScrollingFrame
 ma.BackgroundColor3 = Color3.new(0, 0, 0)
 ma.BackgroundTransparency = 0.69999998807907
-ma.Position = UDim2.new(0, 0, 0.300000012, 0)
+ma.Position = UDim2.new(0, 0, 0.349999994, 0)
 ma.Size = UDim2.new(0, 157, 0, 32)
 ma.Font = Enum.Font.SourceSans
 ma.Text = "SPAWN AT MA"
@@ -182,13 +183,25 @@ uni.Name = "uni"
 uni.Parent = ScrollingFrame
 uni.BackgroundColor3 = Color3.new(0, 0, 0)
 uni.BackgroundTransparency = 0.69999998807907
-uni.Position = UDim2.new(0, 0, 0.349999994, 0)
+uni.Position = UDim2.new(0, 0, 0.400000006, 0)
 uni.Size = UDim2.new(0, 157, 0, 32)
 uni.Font = Enum.Font.SourceSans
 uni.Text = "SPAWN AT UNI"
 uni.TextColor3 = Color3.new(1, 1, 1)
 uni.TextSize = 14
 uni.TextWrapped = true
+
+esp.Name = "esp"
+esp.Parent = ScrollingFrame
+esp.BackgroundColor3 = Color3.new(0, 0, 0)
+esp.BackgroundTransparency = 0.69999998807907
+esp.Position = UDim2.new(0, 0, 0.25, 0)
+esp.Size = UDim2.new(0, 157, 0, 32)
+esp.Font = Enum.Font.SourceSans
+esp.Text = "TOGGLE ESP"
+esp.TextColor3 = Color3.new(1, 1, 1)
+esp.TextSize = 14
+esp.TextWrapped = true
 
 info.Name = "info"
 info.Parent = ImageLabel
@@ -279,7 +292,7 @@ max_2.TextSize = 20
 max_2.TextTransparency = 1
 max_2.TextWrapped = true
 -- Scripts:
-function SCRIPT_SCNH68_FAKESCRIPT() -- view.Script 
+function SCRIPT_FGHF89_FAKESCRIPT() -- view.Script 
 	local script = Instance.new('Script')
 	script.Parent = view
 	script.Parent.MouseButton1Click:connect(function()
@@ -341,8 +354,8 @@ function SCRIPT_SCNH68_FAKESCRIPT() -- view.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_SCNH68_FAKESCRIPT))
-function SCRIPT_XJNP73_FAKESCRIPT() -- corpse.Script 
+coroutine.resume(coroutine.create(SCRIPT_FGHF89_FAKESCRIPT))
+function SCRIPT_ZWPZ85_FAKESCRIPT() -- corpse.Script 
 	local script = Instance.new('Script')
 	script.Parent = corpse
 	script.Parent.MouseButton1Click:connect(function()
@@ -454,8 +467,8 @@ function SCRIPT_XJNP73_FAKESCRIPT() -- corpse.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XJNP73_FAKESCRIPT))
-function SCRIPT_GONU82_FAKESCRIPT() -- fly.Script 
+coroutine.resume(coroutine.create(SCRIPT_ZWPZ85_FAKESCRIPT))
+function SCRIPT_QNSI88_FAKESCRIPT() -- fly.Script 
 	local script = Instance.new('Script')
 	script.Parent = fly
 		script.Parent.MouseButton1Click:connect(function()
@@ -557,8 +570,8 @@ function SCRIPT_GONU82_FAKESCRIPT() -- fly.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_GONU82_FAKESCRIPT))
-function SCRIPT_OJKE83_FAKESCRIPT() -- max.Script 
+coroutine.resume(coroutine.create(SCRIPT_QNSI88_FAKESCRIPT))
+function SCRIPT_VGSQ71_FAKESCRIPT() -- max.Script 
 	local script = Instance.new('Script')
 	script.Parent = max
 	script.Parent.MouseButton1Click:connect(function()
@@ -611,8 +624,8 @@ function SCRIPT_OJKE83_FAKESCRIPT() -- max.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_OJKE83_FAKESCRIPT))
-function SCRIPT_ROHB73_FAKESCRIPT() -- aim.Script 
+coroutine.resume(coroutine.create(SCRIPT_VGSQ71_FAKESCRIPT))
+function SCRIPT_LAFL79_FAKESCRIPT() -- aim.Script 
 	local script = Instance.new('Script')
 	script.Parent = aim
 	script.Parent.MouseButton1Click:connect(function()
@@ -670,15 +683,15 @@ function SCRIPT_ROHB73_FAKESCRIPT() -- aim.Script
 	toggle_aim = Enum.UserInputType.MouseButton2
 	toggle_aimbot = Enum.KeyCode.Q
 	toggle_trigger = Enum.KeyCode.F12
-	toggle_esp = Enum.KeyCode.End
+	toggle_esp = Enum.KeyCode.F12
 	toggle_gui = Enum.KeyCode.F10
 	toggle_bottompos = Enum.KeyCode.F12
 	toggle_performance = Enum.KeyCode.F12
 	toggle_bones = Enum.KeyCode.F12
 	toggle_chams = Enum.KeyCode.F12
-	toggle_tracers = Enum.KeyCode.T
-	toggle_boxes = Enum.KeyCode.B
-	ffatoggle = Enum.KeyCode.F6
+	toggle_tracers = Enum.KeyCode.F12
+	toggle_boxes = Enum.KeyCode.F12
+	ffatoggle = Enum.KeyCode.F12
 	targetpart_change = Enum.KeyCode.BackSlash
 	priority_toggle = Enum.KeyCode.Insert
 	sethotkey = Enum.KeyCode.F12
@@ -730,10 +743,10 @@ function SCRIPT_ROHB73_FAKESCRIPT() -- aim.Script
 	trigger_delay = 1/20
 	
 	-- esp
-	esp_toggled = true
-	esp_bones = true
+	esp_toggled = false
+	esp_bones = false
 	esp_chams = false
-	esp_tracers = true
+	esp_tracers = false
 	-- item_esp (coming soon)
 	linesize = 1
 	showdists = true
@@ -1187,8 +1200,6 @@ function SCRIPT_ROHB73_FAKESCRIPT() -- aim.Script
 	end)
 	
 	Notification({Title='ApocAimAssist '..version;Text='loaded successfully.';Icon='rbxassetid://2965311676';Duration=10;})
-	wait(.5)
-	Notification({Title='Created by';Text='Hills';Duration=4;Icon='https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&username=qds'})
 	
 	
 	RS.RenderStepped:Connect(function()
@@ -1450,8 +1461,8 @@ function SCRIPT_ROHB73_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ROHB73_FAKESCRIPT))
-function SCRIPT_XOFX71_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_LAFL79_FAKESCRIPT))
+function SCRIPT_PZHH88_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
@@ -1512,8 +1523,8 @@ function SCRIPT_XOFX71_FAKESCRIPT() -- speed.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XOFX71_FAKESCRIPT))
-function SCRIPT_RCQN82_FAKESCRIPT() -- save.Script 
+coroutine.resume(coroutine.create(SCRIPT_PZHH88_FAKESCRIPT))
+function SCRIPT_NRUX83_FAKESCRIPT() -- save.Script 
 	local script = Instance.new('Script')
 	script.Parent = save
 	script.Parent.MouseButton1Click:connect(function()
@@ -1598,8 +1609,8 @@ function SCRIPT_RCQN82_FAKESCRIPT() -- save.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_RCQN82_FAKESCRIPT))
-function SCRIPT_HFYM75_FAKESCRIPT() -- hub.Script 
+coroutine.resume(coroutine.create(SCRIPT_NRUX83_FAKESCRIPT))
+function SCRIPT_GOPN84_FAKESCRIPT() -- hub.Script 
 	local script = Instance.new('Script')
 	script.Parent = hub
 	script.Parent.MouseButton1Click:connect(function()
@@ -1652,8 +1663,8 @@ function SCRIPT_HFYM75_FAKESCRIPT() -- hub.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_HFYM75_FAKESCRIPT))
-function SCRIPT_QLSN68_FAKESCRIPT() -- ma.Script 
+coroutine.resume(coroutine.create(SCRIPT_GOPN84_FAKESCRIPT))
+function SCRIPT_NPJA68_FAKESCRIPT() -- ma.Script 
 	local script = Instance.new('Script')
 	script.Parent = ma
 	script.Parent.MouseButton1Click:connect(function()
@@ -1707,8 +1718,8 @@ function SCRIPT_QLSN68_FAKESCRIPT() -- ma.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_QLSN68_FAKESCRIPT))
-function SCRIPT_NYIY77_FAKESCRIPT() -- uni.Script 
+coroutine.resume(coroutine.create(SCRIPT_NPJA68_FAKESCRIPT))
+function SCRIPT_IUDN76_FAKESCRIPT() -- uni.Script 
 	local script = Instance.new('Script')
 	script.Parent = uni
 	script.Parent.MouseButton1Click:connect(function()
@@ -1762,8 +1773,145 @@ function SCRIPT_NYIY77_FAKESCRIPT() -- uni.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_NYIY77_FAKESCRIPT))
-function SCRIPT_IFNQ75_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_IUDN76_FAKESCRIPT))
+function SCRIPT_HYEV69_FAKESCRIPT() -- esp.Script 
+	local script = Instance.new('Script')
+	script.Parent = esp
+	script.Parent.MouseButton1Click:connect(function()
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		--
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='Player ESP Toggled';Duration=4;Icon=''})
+		
+		script.Parent.Active = false
+		script.Parent.BackgroundTransparency = 0.5
+		script.Parent.Text = "LOADED"
+		wait(2)
+		script.Parent.Active = true
+		script.Parent.BackgroundTransparency = 0.7
+		script.Parent.Text = "TOGGLE ESP"
+		
+		--Max Loop
+	
+	local plr = game.Players.LocalPlayer
+	repeat wait() until plr.Character
+	
+	GetFirstChildOfType = function(Parent,Type,nameonly)
+		for i,v in pairs(Parent:GetChildren()) do
+			if type(v) == Type or v:IsA(Type) or v.ClassName == Type then
+				if nameonly then
+					return v.Name
+				else
+					return v 
+				end
+			end
+		end
+	end
+	
+	GetPlayerLoadout = function(Player)
+		local Char = Player.Character
+		local Backpack
+		local HoldingItem
+		if Player.Character:FindFirstChild'Equipped' then
+			HoldingItem= GetFirstChildOfType(Player.Character.Equipped,'Model',true) or 'Nothing'
+		else
+			HoldingItem = 'None'
+		end
+		local Thirst = Char.Stats.Thirst.Value
+		local Stamina = Char.Stats.Stamina.Value
+		local Combat = Char.Stats.Combat.Value
+		for i,v in pairs(Char.Equipment:GetChildren()) do
+		if string.find(v.Name:lower(),'backpack') then Backpack = v.Name break end
+		end
+			if Backpack == nil then
+				Backpack = 'Nothing'
+			end
+		local tbl = {HoldingItem,Backpack,Stamina,Combat}
+		return tbl
+	end
+	
+	function AddPlayerEsp()
+		for i,espz in pairs(game:GetService'Players':GetChildren()) do
+			if espz.Character and espz.Character.Head then
+				if espz.Character.Head:FindFirstChild'plrespxd' then
+					espz.Character.Head:FindFirstChild'plrespxd':Destroy()
+				end
+				local stats = GetPlayerLoadout(espz)
+				local bill = Instance.new('BillboardGui',espz.Character.Head)
+				bill.Name = 'plrespxd'
+				bill.Size = UDim2.new(5,0,1,0)
+				bill.Adornee = bill.Parent
+				bill.AlwaysOnTop = true
+				local info = Instance.new('TextLabel',bill)
+				info.Position=UDim2.new(0.999,0,0,0)
+				info.Size = UDim2.new(0,100,0,30)
+				info.TextXAlignment = 'Left'
+				info.TextYAlignment = 'Top'
+				info.TextColor3 = Color3.new(107, 50, 124)
+				info.BackgroundTransparency = 1
+				info.Text = ([[
+	Name: ]]..espz.Name..[[
+	
+	]]..[[
+	Health: ]]..espz.Character.Humanoid.Health..[[
+	
+	]]..[[
+	Holding Item: ]]..stats[1]..[[
+	
+	]]..[[
+	Backpack: ]]..stats[2]..[[
+	]]..[[
+	
+	Stamina: ]]..stats[3]..[[
+	
+	]]..[[
+	InCombat: ]]..tostring(stats[4])..[[
+				
+	]]..[[
+	Distance: ]]..math.floor(((plr.Character.Head.Position - espz.Character.Head.Position).Magnitude) + 0.5)..[[
+	]])
+				
+			end
+		end
+	end
+	while wait() do
+		AddPlayerEsp()
+	end
+	
+		
+		
+		end)
+	
+
+end
+coroutine.resume(coroutine.create(SCRIPT_HYEV69_FAKESCRIPT))
+function SCRIPT_FTIL68_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
@@ -1789,8 +1937,8 @@ function SCRIPT_IFNQ75_FAKESCRIPT() -- info.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_IFNQ75_FAKESCRIPT))
-function SCRIPT_WNRP86_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_FTIL68_FAKESCRIPT))
+function SCRIPT_HOZN73_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1815,8 +1963,8 @@ function SCRIPT_WNRP86_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_WNRP86_FAKESCRIPT))
-function SCRIPT_ZKDH82_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_HOZN73_FAKESCRIPT))
+function SCRIPT_GGTE69_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1841,8 +1989,8 @@ function SCRIPT_ZKDH82_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ZKDH82_FAKESCRIPT))
-function SCRIPT_BDQF70_FAKESCRIPT() -- item.Script 
+coroutine.resume(coroutine.create(SCRIPT_GGTE69_FAKESCRIPT))
+function SCRIPT_DNZZ80_FAKESCRIPT() -- item.Script 
 	local script = Instance.new('Script')
 	script.Parent = item
 	script.Parent.MouseButton1Click:connect(function()
@@ -1993,8 +2141,8 @@ function SCRIPT_BDQF70_FAKESCRIPT() -- item.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_BDQF70_FAKESCRIPT))
-function SCRIPT_SFFB65_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_DNZZ80_FAKESCRIPT))
+function SCRIPT_SBPH89_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -2031,8 +2179,8 @@ function SCRIPT_SFFB65_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_SFFB65_FAKESCRIPT))
-function SCRIPT_BYDZ67_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_SBPH89_FAKESCRIPT))
+function SCRIPT_WSTX82_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -2043,8 +2191,8 @@ function SCRIPT_BYDZ67_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_BYDZ67_FAKESCRIPT))
-function SCRIPT_FWZD65_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_WSTX82_FAKESCRIPT))
+function SCRIPT_NFTI73_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -2069,8 +2217,8 @@ function SCRIPT_FWZD65_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_FWZD65_FAKESCRIPT))
-function SCRIPT_QSCF89_FAKESCRIPT() -- AR8.logger2 
+coroutine.resume(coroutine.create(SCRIPT_NFTI73_FAKESCRIPT))
+function SCRIPT_PPJT70_FAKESCRIPT() -- AR8.logger2 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	--Logger
@@ -2080,8 +2228,8 @@ function SCRIPT_QSCF89_FAKESCRIPT() -- AR8.logger2
 		
 
 end
-coroutine.resume(coroutine.create(SCRIPT_QSCF89_FAKESCRIPT))
-function SCRIPT_FQTG85_FAKESCRIPT() -- AR8.spawncheck 
+coroutine.resume(coroutine.create(SCRIPT_PPJT70_FAKESCRIPT))
+function SCRIPT_EOYD80_FAKESCRIPT() -- AR8.spawncheck 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	if game.Players.LocalPlayer.PlayerGui["Interface Main"]["Main Menu"].Visible == false then
@@ -2098,8 +2246,8 @@ function SCRIPT_FQTG85_FAKESCRIPT() -- AR8.spawncheck
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_FQTG85_FAKESCRIPT))
-function SCRIPT_ZAAS68_FAKESCRIPT() -- AR8.hubmap 
+coroutine.resume(coroutine.create(SCRIPT_EOYD80_FAKESCRIPT))
+function SCRIPT_ZTYX78_FAKESCRIPT() -- AR8.hubmap 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 		--HubGen Map
@@ -2108,13 +2256,12 @@ function SCRIPT_ZAAS68_FAKESCRIPT() -- AR8.hubmap
 			game.Players.LocalPlayer.PlayerGui["Interface Main"].Controls:Remove()
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ZAAS68_FAKESCRIPT))
-function SCRIPT_ZZZU77_FAKESCRIPT() -- AR8.blacklist 
+coroutine.resume(coroutine.create(SCRIPT_ZTYX78_FAKESCRIPT))
+function SCRIPT_WUQE82_FAKESCRIPT() -- AR8.blacklist 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	--Hills Blacklist
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/AR8HOST/blacklistnew/master/loop'))()
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ZZZU77_FAKESCRIPT))
-
+coroutine.resume(coroutine.create(SCRIPT_WUQE82_FAKESCRIPT))
