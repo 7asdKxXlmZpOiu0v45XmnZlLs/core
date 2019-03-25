@@ -24,6 +24,7 @@ local uni = Instance.new("TextButton")
 local info = Instance.new("TextButton")
 local close = Instance.new("TextButton")
 local min = Instance.new("TextButton")
+local item = Instance.new("TextButton")
 local PROP = Instance.new("Frame")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local max_2 = Instance.new("TextButton")
@@ -35,7 +36,7 @@ MAIN.Name = "MAIN"
 MAIN.Parent = AR8
 MAIN.BackgroundColor3 = Color3.new(1, 1, 1)
 MAIN.BackgroundTransparency = 1
-MAIN.Position = UDim2.new(99999, 99999, 99999, 99999)
+MAIN.Position = UDim2.new(99999, 999999, 999999, 999999)
 MAIN.Size = UDim2.new(0, 281, 0, 453)
 MAIN.Visible = false
 
@@ -44,7 +45,7 @@ ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
 ImageLabel.BackgroundTransparency = 1
 ImageLabel.Position = UDim2.new(0.0872374773, 0, 0.0684326738, 0)
 ImageLabel.Size = UDim2.new(0, 241, 0, 420)
-ImageLabel.Image = "rbxassetid://2968933244"
+ImageLabel.Image = "rbxassetid://2997310502"
 
 view.Name = "view"
 view.Parent = ImageLabel
@@ -52,7 +53,7 @@ view.BackgroundColor3 = Color3.new(0, 1, 0.0823529)
 view.BackgroundTransparency = 1
 view.BorderColor3 = Color3.new(1, 1, 1)
 view.Position = UDim2.new(0.0757836327, 0, 0.430571407, 0)
-view.Size = UDim2.new(0, 98, 0, 25)
+view.Size = UDim2.new(0, 98, 0, 21)
 view.ZIndex = 9
 view.Font = Enum.Font.SourceSans
 view.Text = "Login"
@@ -79,7 +80,7 @@ corpse.BackgroundColor3 = Color3.new(0, 1, 0.0823529)
 corpse.BackgroundTransparency = 1
 corpse.BorderColor3 = Color3.new(1, 1, 1)
 corpse.Position = UDim2.new(0.486572027, 0, 0.428652436, 0)
-corpse.Size = UDim2.new(0, 105, 0, 25)
+corpse.Size = UDim2.new(0, 105, 0, 22)
 corpse.ZIndex = 9
 corpse.Font = Enum.Font.SourceSans
 corpse.Text = "Login"
@@ -233,6 +234,20 @@ min.TextSize = 20
 min.TextTransparency = 1
 min.TextWrapped = true
 
+item.Name = "item"
+item.Parent = ImageLabel
+item.BackgroundColor3 = Color3.new(0, 1, 0.0823529)
+item.BackgroundTransparency = 1
+item.BorderColor3 = Color3.new(1, 1, 1)
+item.Position = UDim2.new(0.0757836327, 0, 0.430571407, 0)
+item.Size = UDim2.new(0, 98, 0, 21)
+item.ZIndex = 9
+item.Font = Enum.Font.SourceSans
+item.Text = "Login"
+item.TextColor3 = Color3.new(1, 1, 1)
+item.TextSize = 14
+item.TextTransparency = 1
+
 PROP.Name = "PROP"
 PROP.Parent = AR8
 PROP.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -263,7 +278,7 @@ max_2.TextSize = 20
 max_2.TextTransparency = 1
 max_2.TextWrapped = true
 -- Scripts:
-function SCRIPT_VWRY84_FAKESCRIPT() -- view.Script 
+function SCRIPT_KKRP88_FAKESCRIPT() -- view.Script 
 	local script = Instance.new('Script')
 	script.Parent = view
 	script.Parent.MouseButton1Click:connect(function()
@@ -325,8 +340,8 @@ function SCRIPT_VWRY84_FAKESCRIPT() -- view.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_VWRY84_FAKESCRIPT))
-function SCRIPT_KHUH79_FAKESCRIPT() -- corpse.Script 
+coroutine.resume(coroutine.create(SCRIPT_KKRP88_FAKESCRIPT))
+function SCRIPT_YMPD66_FAKESCRIPT() -- corpse.Script 
 	local script = Instance.new('Script')
 	script.Parent = corpse
 	script.Parent.MouseButton1Click:connect(function()
@@ -438,8 +453,8 @@ function SCRIPT_KHUH79_FAKESCRIPT() -- corpse.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_KHUH79_FAKESCRIPT))
-function SCRIPT_CXSS74_FAKESCRIPT() -- fly.Script 
+coroutine.resume(coroutine.create(SCRIPT_YMPD66_FAKESCRIPT))
+function SCRIPT_SJLG68_FAKESCRIPT() -- fly.Script 
 	local script = Instance.new('Script')
 	script.Parent = fly
 		script.Parent.MouseButton1Click:connect(function()
@@ -541,8 +556,8 @@ function SCRIPT_CXSS74_FAKESCRIPT() -- fly.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_CXSS74_FAKESCRIPT))
-function SCRIPT_HDSR89_FAKESCRIPT() -- max.Script 
+coroutine.resume(coroutine.create(SCRIPT_SJLG68_FAKESCRIPT))
+function SCRIPT_IEYR81_FAKESCRIPT() -- max.Script 
 	local script = Instance.new('Script')
 	script.Parent = max
 	script.Parent.MouseButton1Click:connect(function()
@@ -595,8 +610,8 @@ function SCRIPT_HDSR89_FAKESCRIPT() -- max.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_HDSR89_FAKESCRIPT))
-function SCRIPT_DGQG75_FAKESCRIPT() -- aim.Script 
+coroutine.resume(coroutine.create(SCRIPT_IEYR81_FAKESCRIPT))
+function SCRIPT_YVUU71_FAKESCRIPT() -- aim.Script 
 	local script = Instance.new('Script')
 	script.Parent = aim
 	script.Parent.MouseButton1Click:connect(function()
@@ -1434,8 +1449,8 @@ function SCRIPT_DGQG75_FAKESCRIPT() -- aim.Script
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_DGQG75_FAKESCRIPT))
-function SCRIPT_AFZA88_FAKESCRIPT() -- speed.Script 
+coroutine.resume(coroutine.create(SCRIPT_YVUU71_FAKESCRIPT))
+function SCRIPT_AFSO81_FAKESCRIPT() -- speed.Script 
 	local script = Instance.new('Script')
 	script.Parent = speed
 	script.Parent.MouseButton1Click:connect(function()
@@ -1496,8 +1511,8 @@ function SCRIPT_AFZA88_FAKESCRIPT() -- speed.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_AFZA88_FAKESCRIPT))
-function SCRIPT_YSJP67_FAKESCRIPT() -- save.Script 
+coroutine.resume(coroutine.create(SCRIPT_AFSO81_FAKESCRIPT))
+function SCRIPT_FMUO89_FAKESCRIPT() -- save.Script 
 	local script = Instance.new('Script')
 	script.Parent = save
 	script.Parent.MouseButton1Click:connect(function()
@@ -1582,8 +1597,8 @@ function SCRIPT_YSJP67_FAKESCRIPT() -- save.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_YSJP67_FAKESCRIPT))
-function SCRIPT_GILP72_FAKESCRIPT() -- hub.Script 
+coroutine.resume(coroutine.create(SCRIPT_FMUO89_FAKESCRIPT))
+function SCRIPT_GQXZ78_FAKESCRIPT() -- hub.Script 
 	local script = Instance.new('Script')
 	script.Parent = hub
 	script.Parent.MouseButton1Click:connect(function()
@@ -1636,8 +1651,8 @@ function SCRIPT_GILP72_FAKESCRIPT() -- hub.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_GILP72_FAKESCRIPT))
-function SCRIPT_JNDZ86_FAKESCRIPT() -- ma.Script 
+coroutine.resume(coroutine.create(SCRIPT_GQXZ78_FAKESCRIPT))
+function SCRIPT_TURG66_FAKESCRIPT() -- ma.Script 
 	local script = Instance.new('Script')
 	script.Parent = ma
 	script.Parent.MouseButton1Click:connect(function()
@@ -1691,8 +1706,8 @@ function SCRIPT_JNDZ86_FAKESCRIPT() -- ma.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_JNDZ86_FAKESCRIPT))
-function SCRIPT_RPJN66_FAKESCRIPT() -- uni.Script 
+coroutine.resume(coroutine.create(SCRIPT_TURG66_FAKESCRIPT))
+function SCRIPT_XXGF87_FAKESCRIPT() -- uni.Script 
 	local script = Instance.new('Script')
 	script.Parent = uni
 	script.Parent.MouseButton1Click:connect(function()
@@ -1746,8 +1761,8 @@ function SCRIPT_RPJN66_FAKESCRIPT() -- uni.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_RPJN66_FAKESCRIPT))
-function SCRIPT_STRC87_FAKESCRIPT() -- info.Script 
+coroutine.resume(coroutine.create(SCRIPT_XXGF87_FAKESCRIPT))
+function SCRIPT_FMMS89_FAKESCRIPT() -- info.Script 
 	local script = Instance.new('Script')
 	script.Parent = info
 	script.Parent.MouseButton1Click:connect(function()
@@ -1773,8 +1788,8 @@ function SCRIPT_STRC87_FAKESCRIPT() -- info.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_STRC87_FAKESCRIPT))
-function SCRIPT_FFVQ89_FAKESCRIPT() -- close.Script 
+coroutine.resume(coroutine.create(SCRIPT_FMMS89_FAKESCRIPT))
+function SCRIPT_HMCY65_FAKESCRIPT() -- close.Script 
 	local script = Instance.new('Script')
 	script.Parent = close
 	script.Parent.MouseButton1Click:connect(function()
@@ -1799,8 +1814,8 @@ function SCRIPT_FFVQ89_FAKESCRIPT() -- close.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_FFVQ89_FAKESCRIPT))
-function SCRIPT_XLVO70_FAKESCRIPT() -- min.Script 
+coroutine.resume(coroutine.create(SCRIPT_HMCY65_FAKESCRIPT))
+function SCRIPT_BAXJ73_FAKESCRIPT() -- min.Script 
 	local script = Instance.new('Script')
 	script.Parent = min
 	script.Parent.MouseButton1Click:connect(function()
@@ -1825,8 +1840,160 @@ function SCRIPT_XLVO70_FAKESCRIPT() -- min.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XLVO70_FAKESCRIPT))
-function SCRIPT_XGAA74_FAKESCRIPT() -- MAIN.start 
+coroutine.resume(coroutine.create(SCRIPT_BAXJ73_FAKESCRIPT))
+function SCRIPT_MPNS89_FAKESCRIPT() -- item.Script 
+	local script = Instance.new('Script')
+	script.Parent = item
+	script.Parent.MouseButton1Click:connect(function()
+		
+		--Button Sound Effect
+		local s = Instance.new("Sound")
+		 
+		s.Name = "Sound"
+		s.SoundId = "http://www.roblox.com/asset/?id=452267918"
+		s.Volume = 7
+		s.Looped = false
+		s.archivable = false
+		 
+		s.Parent = game.Workspace
+		 
+		s:play()
+		
+		local function playsound(id)
+			local sound = Instance.new('Sound',Camera)
+			sound.SoundId = 'rbxassetid://'..id
+			sound.Volume = 3
+			sound:Play()
+			game:GetService('Debris'):AddItem(sound,5)
+		end
+		
+		local function Notification(...)
+			playsound(140910211)
+			game.StarterGui:SetCore('SendNotification',...)
+		end
+		
+		Notification({Title='Loaded';Text='Item Search Success';Duration=4;Icon=''})
+	local Objects = true
+	local Items = false
+	local Distance = 1000
+	local ItemFilter = Username.Text
+	local UpdateWait = 1 -- How long to wait before updating again, using RenderStepped broke it for me, but I was probably doing something wrong
+	
+	
+	local plrs = game:GetService('Players')
+	local plr = plrs.LocalPlayer
+	local cam = workspace.CurrentCamera
+	local Loot = workspace.Loot
+	local Houses = workspace.Map.Client.Elements
+	local rs = game:GetService('RunService')
+	local EspFolder = Instance.new('Folder',workspace)
+	
+	function GetLootFromObjects(filter)
+		local items = {}
+		for i,v in pairs(Houses:GetChildren()) do
+			for _,k in pairs(v:GetChildren()) do
+				if k:FindFirstChild'Furniture' then
+					for too,many in pairs(k.Furniture:GetChildren()) do
+						for parent,Item in pairs(many:GetChildren()) do
+							if Item.ClassName == 'NumberValue' then
+								if filter == nil then
+									if not Item:FindFirstChild'nigger' then
+										table.insert(items,Item)
+									end
+								elseif Item.Name:lower():find(filter:lower()) then
+									if not Item:FindFirstChild'nigger' then
+										table.insert(items,Item)
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+		return items
+	end
+	function GetDroppedLoot(filter)
+		local items = {}
+		for i,v in pairs(Loot:GetChildren() or {}) do
+			for _,k in pairs(v:GetChildren()) do
+				if filter == nil then
+					if not k:FindFirstChild'nigger' then
+						table.insert(items,k)
+						Instance.new('Folder',k).Name = 'nigger'
+					end
+				elseif k.Name:lower():find(filter:lower()) then
+					if not k:FindFirstChild'nigger' then
+						table.insert(items,k)
+						Instance.new('Folder',k).Name = 'nigger'
+					end
+				end
+			end
+		end
+		return items
+	end
+	
+	function DroppedItemEsp(filter)
+		for i,v in pairs(GetDroppedLoot(filter) or {}) do
+			if (plr.Character.Head.Position - v.Value.p).Magnitude < Distance then
+				local a = Instance.new('Part',EspFolder)
+				a.Size = Vector3.new(0,0,0)
+				a.Name = 'itemesp'
+				a.CFrame = v.Value
+				a.Anchored = true
+				a.CanCollide = false
+				a.Transparency = 1
+				local bill = Instance.new('BillboardGui',a)
+				bill.Size = UDim2.new(0,100,0,20)
+				bill.Adornee = a
+				bill.AlwaysOnTop = true
+				local item = Instance.new('TextLabel',bill)
+				item.Size = UDim2.new(1,0,1,0)
+				item.Text = v.Name
+				item.Text = v.Name.. ' : '..tostring((plr.Character.Head.Position - v.Value.p).Magnitude):sub(1,string.len(Distance))
+				item.BackgroundTransparency = 1
+				item.TextColor3=  Color3.new(242, 243, 243)
+			end
+		end
+	end
+	
+	function ObjectLootEsp(filter)
+		for i,v in pairs(GetLootFromObjects(filter) or {}) do
+			if (plr.Character.Head.Position - v.Parent.BasePart.Position).Magnitude < Distance then
+				local a = Instance.new('Part',EspFolder)
+				a.Size = Vector3.new(0,0,0)
+				a.Position = v.Parent.BasePart.Position
+				a.Transparency = 1
+				a.CanCollide = false
+				local bill = Instance.new('BillboardGui',a)
+				bill.Size = UDim2.new(0,100,0,20)
+				bill.Adornee = v.Parent.BasePart
+				bill.AlwaysOnTop = true
+				local item = Instance.new('TextLabel',bill)
+				item.Size = UDim2.new(1,0,1,0)
+				item.Name = v.Name
+				item.Text = v.Name..' : '..tostring((plr.Character.Head.Position - v.Parent.BasePart.Position).Magnitude):sub(1,string.len(Distance))
+				item.BackgroundTransparency = 1
+				item.TextColor3=  Color3.new(242, 243, 243)
+			end
+		end
+	end
+	
+	while wait() do
+		EspFolder:ClearAllChildren()
+		if plr.Character and plr.Character.Head then
+			ObjectLootEsp(ItemFilter)
+			DroppedItemEsp(ItemFilter)
+			wait(UpdateWait)
+		end
+	end
+		
+		end)
+	
+
+end
+coroutine.resume(coroutine.create(SCRIPT_MPNS89_FAKESCRIPT))
+function SCRIPT_GTPK90_FAKESCRIPT() -- MAIN.start 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	--LOADED FUNCTION
@@ -1863,8 +2030,8 @@ function SCRIPT_XGAA74_FAKESCRIPT() -- MAIN.start
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XGAA74_FAKESCRIPT))
-function SCRIPT_ZOJB76_FAKESCRIPT() -- MAIN.fog 
+coroutine.resume(coroutine.create(SCRIPT_GTPK90_FAKESCRIPT))
+function SCRIPT_HEAH79_FAKESCRIPT() -- MAIN.fog 
 	local script = Instance.new('Script')
 	script.Parent = MAIN
 	while wait() do
@@ -1875,8 +2042,8 @@ function SCRIPT_ZOJB76_FAKESCRIPT() -- MAIN.fog
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_ZOJB76_FAKESCRIPT))
-function SCRIPT_UVRA77_FAKESCRIPT() -- max_2.Script 
+coroutine.resume(coroutine.create(SCRIPT_HEAH79_FAKESCRIPT))
+function SCRIPT_XHTN89_FAKESCRIPT() -- max_2.Script 
 	local script = Instance.new('Script')
 	script.Parent = max_2
 	script.Parent.MouseButton1Click:connect(function()
@@ -1901,8 +2068,8 @@ function SCRIPT_UVRA77_FAKESCRIPT() -- max_2.Script
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_UVRA77_FAKESCRIPT))
-function SCRIPT_LFQI83_FAKESCRIPT() -- AR8.logger2 
+coroutine.resume(coroutine.create(SCRIPT_XHTN89_FAKESCRIPT))
+function SCRIPT_LNHY73_FAKESCRIPT() -- AR8.logger2 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	--Logger
@@ -1912,8 +2079,8 @@ function SCRIPT_LFQI83_FAKESCRIPT() -- AR8.logger2
 		
 
 end
-coroutine.resume(coroutine.create(SCRIPT_LFQI83_FAKESCRIPT))
-function SCRIPT_LPHL75_FAKESCRIPT() -- AR8.spawncheck 
+coroutine.resume(coroutine.create(SCRIPT_LNHY73_FAKESCRIPT))
+function SCRIPT_DUSD81_FAKESCRIPT() -- AR8.spawncheck 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	if game.Players.LocalPlayer.PlayerGui["Interface Main"]["Main Menu"].Visible == false then
@@ -1930,8 +2097,8 @@ function SCRIPT_LPHL75_FAKESCRIPT() -- AR8.spawncheck
 	
 
 end
-coroutine.resume(coroutine.create(SCRIPT_LPHL75_FAKESCRIPT))
-function SCRIPT_NZPL81_FAKESCRIPT() -- AR8.hubmap 
+coroutine.resume(coroutine.create(SCRIPT_DUSD81_FAKESCRIPT))
+function SCRIPT_SIWE74_FAKESCRIPT() -- AR8.hubmap 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 		--HubGen Map
@@ -1940,12 +2107,12 @@ function SCRIPT_NZPL81_FAKESCRIPT() -- AR8.hubmap
 			game.Players.LocalPlayer.PlayerGui["Interface Main"].Controls:Remove()
 
 end
-coroutine.resume(coroutine.create(SCRIPT_NZPL81_FAKESCRIPT))
-function SCRIPT_XMHL72_FAKESCRIPT() -- AR8.blacklist 
+coroutine.resume(coroutine.create(SCRIPT_SIWE74_FAKESCRIPT))
+function SCRIPT_RTPG73_FAKESCRIPT() -- AR8.blacklist 
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	--Hills Blacklist
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/AR8HOST/blacklistnew/master/loop'))()
 
 end
-coroutine.resume(coroutine.create(SCRIPT_XMHL72_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_RTPG73_FAKESCRIPT))
