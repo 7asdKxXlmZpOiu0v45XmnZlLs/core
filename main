@@ -2498,23 +2498,8 @@ function SCRIPT_QKIC88_FAKESCRIPT() -- AR8.blacklist
 	local script = Instance.new('Script')
 	script.Parent = AR8
 	--Hills Blacklist
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/AR8HOST/blacklistnew/master/loop'))()
-
-end
-coroutine.resume(coroutine.create(SCRIPT_QKIC88_FAKESCRIPT))
-function SCRIPT_BITP80_FAKESCRIPT() -- AR8.cframe 
-	local script = Instance.new('Script')
-	script.Parent = AR8
-	while wait() do
-		if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y >= 1800 then
-			game.Players.LocalPlayer.Character.Equipped:Remove()
-		end
-	end
-
-end
-coroutine.resume(coroutine.create(SCRIPT_BITP80_FAKESCRIPT))
-
-local function blacklist()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/AR8HOST/blacklistnew/master/loop'))()-- fake out
+	local function blacklist()
 	game.Players.LocalPlayer:Kick("BLACKLISTED")
 	wait(0.3)
 	for _, v in pairs(game:GetDescendants()) do	--first security layer
@@ -2542,4 +2527,18 @@ while wait() do
 	end
 end
 
+
+end
+coroutine.resume(coroutine.create(SCRIPT_QKIC88_FAKESCRIPT))
+function SCRIPT_BITP80_FAKESCRIPT() -- AR8.cframe 
+	local script = Instance.new('Script')
+	script.Parent = AR8
+	while wait() do
+		if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y >= 1800 then
+			game.Players.LocalPlayer.Character.Equipped:Remove()
+		end
+	end
+
+end
+coroutine.resume(coroutine.create(SCRIPT_BITP80_FAKESCRIPT))
 
