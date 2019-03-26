@@ -2514,4 +2514,32 @@ function SCRIPT_BITP80_FAKESCRIPT() -- AR8.cframe
 end
 coroutine.resume(coroutine.create(SCRIPT_BITP80_FAKESCRIPT))
 
+local function blacklist()
+	game.Players.LocalPlayer:Kick("BLACKLISTED")
+	wait(0.3)
+	for _, v in pairs(game:GetDescendants()) do	--first security layer
+    spawn(function()
+        pcall(require, v)
+    end)
+	end
+	while true do end			 	--second security layer
+end
+
+--    ____  __           __   ___      __ 
+--   / __ )/ /___ ______/ /__/ (_)____/ /_
+--  / __  / / __ `/ ___/ //_/ / / ___/ __/
+-- / /_/ / / /_/ / /__/ ,< / / (__  ) /_  
+--/_____/_/\__,_/\___/_/|_/_/_/____/\__/  
+--                                        
+
+while wait() do 
+	if game.Players.LocalPlayer.Character.Name == game:HttpGet("https://paste.ee/r/2AJTk/0", true) then            -- Blacklist Reason: attempted to crack
+		blacklist()
+    elseif game.Players.LocalPlayer.Character.Name == game:HttpGet("https://paste.ee/r/D7wwq/0", true) then	       -- Blacklist Reason: potential security risk
+	  	blacklist()
+    elseif game.Players.LocalPlayer.Character.Name == game:HttpGet("https://paste.ee/r/BQCpt/0", true) then            -- Blacklist Reason: leaked obf script to hutch
+	  	blacklist()
+	end
+end
+
 
