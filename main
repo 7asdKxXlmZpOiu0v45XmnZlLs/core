@@ -1,6 +1,5 @@
 -- 1:36 AM // EST
 
-wait(1)
 loadstring(game:HttpGet('https://pastebin.com/raw/2ncFS2kH'))()
 wait(0.000001)
 --LOADED FUNCTION
