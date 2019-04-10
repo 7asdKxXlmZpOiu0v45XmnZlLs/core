@@ -1,5 +1,6 @@
--- 2:15 AM - EST
+-- 6:38 PM - EST
 loadstring(game:HttpGet('https://pastebin.com/raw/2EX82sdc'))()
+wait(0.00001)
 loadstring(game:HttpGet('https://pastebin.com/raw/2ncFS2kH'))()
 wait(0.000001)
 --LOADED FUNCTION
